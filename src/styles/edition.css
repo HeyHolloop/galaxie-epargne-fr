@@ -1,17 +1,4 @@
-@import "@fontsource/newsreader/latin-400.css";
-@import "@fontsource/newsreader/latin-400-italic.css";
-@import "@fontsource/newsreader/latin-500.css";
-@import "@fontsource/newsreader/latin-600.css";
-@import "@fontsource/newsreader/latin-ext-400.css";
-@import "@fontsource/newsreader/latin-ext-400-italic.css";
-@import "@fontsource/newsreader/latin-ext-500.css";
-@import "@fontsource/newsreader/latin-ext-600.css";
-@import "@fontsource/plus-jakarta-sans/latin-400.css";
-@import "@fontsource/plus-jakarta-sans/latin-500.css";
-@import "@fontsource/plus-jakarta-sans/latin-600.css";
-@import "@fontsource/plus-jakarta-sans/latin-ext-400.css";
-@import "@fontsource/plus-jakarta-sans/latin-ext-500.css";
-@import "@fontsource/plus-jakarta-sans/latin-ext-600.css";
+@import "./faces.css";
 
 @tailwind base;
 @tailwind components;
@@ -236,14 +223,6 @@ textarea {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--ardoise);
-}
-.ge-chapo::first-letter {
-  font-family: var(--display);
-  font-size: 2.55rem;
-  float: left;
-  line-height: 0.9;
-  padding: 0.12rem 0.18rem 0 0;
-  color: var(--encre);
 }
 .ge-chapo a {
   color: var(--encre);
@@ -505,6 +484,8 @@ textarea {
   border-bottom: 1px solid rgba(197, 155, 39, 0.35);
   font-family: var(--display);
   font-size: 1.2rem;
+  cursor: default;
+  pointer-events: none;
 }
 @media (max-width: 767px) {
   .ge-atelier .ge-salon {
@@ -581,17 +562,25 @@ textarea {
   height: auto;
 }
 .ge-corps {
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 .ge-corps h2 {
   font-family: var(--display);
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 2rem 0 0.75rem;
+  margin: 2.35rem 0 0.75rem;
 }
 .ge-corps p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.15rem;
+}
+.ge-corps > p:first-of-type {
+  font-family: var(--display);
+  font-size: 1.28rem;
+  line-height: 1.55;
+  letter-spacing: -0.015em;
+  color: var(--encre);
+  margin-bottom: 1.45rem;
 }
 .ge-corps a {
   text-decoration: underline;
@@ -599,12 +588,20 @@ textarea {
   text-underline-offset: 4px;
 }
 .ge-encart {
-  margin-top: 2rem;
-  padding: 1rem 1.1rem;
-  background: var(--parchemin);
-  border: 1px solid var(--filet);
+  margin-top: 2.75rem;
+  padding: 0.85rem 0 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--encre);
+  border-radius: 0;
+  box-shadow: none;
   color: var(--ardoise);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  line-height: 1.55;
+}
+.ge-encart p {
+  margin: 0;
 }
 .ge-suite {
   width: min(1360px, calc(100% - 7rem));

@@ -9,13 +9,12 @@ interface Props {
 }
 const { items } = Astro.props;
 ---
-<section class="ge-salon ge-bloc">
-  <div class="ge-ruban">
-    <p>{SITE_CONFIG.ui.latestArticles}</p>
-    <p>Fil</p>
-  </div>
-  {items.length === 0 && <p class="ge-vide">{SITE_CONFIG.ui.newContentComing}</p>}
-  {items.length > 0 && (
+{items.length > 0 && (
+  <section class="ge-salon ge-bloc">
+    <div class="ge-ruban">
+      <p>{SITE_CONFIG.ui.latestArticles}</p>
+      <p>Fil</p>
+    </div>
     <div class="ge-fil">
       {items.map((p) => (
         <ArticleTeaser
@@ -27,5 +26,5 @@ const { items } = Astro.props;
         />
       ))}
     </div>
-  )}
-</section>
+  </section>
+)}

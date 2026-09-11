@@ -10,7 +10,7 @@ const id = identity as typeof identity & {
 };
 
 const uiDefaults: Record<string, string> = {
-  readMore: "Lire l'article",
+  readMore: "Lire l’article",
   publishedBy: "Par",
   alsoRead: "À lire également",
   aboutAuthor: "À propos",
@@ -25,7 +25,7 @@ const uiDefaults: Record<string, string> = {
   privacyPolicy: "Politique de confidentialité",
   discover: "Découvrir",
   newContentComing: "Le contenu arrive bientôt.",
-  breadcrumbAria: "Fil d'Ariane",
+  breadcrumbAria: "Fil d’Ariane",
   masthead: "La rédaction",
 };
 

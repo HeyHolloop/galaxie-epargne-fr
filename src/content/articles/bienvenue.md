@@ -11,4 +11,4 @@ status: draft
 isDraft: true
 ---
 
-<p>Ceci est l'article seed du modèle. Le corps HTML arrive ensuite via le pipeline, sans réécriture des liens.</p>
+<p>Ceci est l’article seed du modèle. Le corps HTML arrive ensuite via le pipeline, sans réécriture des liens.</p>
