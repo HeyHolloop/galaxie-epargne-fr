@@ -1,0 +1,21 @@
+---
+import CoverImage from "./CoverImage.astro";
+
+interface Props {
+  href: string;
+  title: string;
+  excerpt?: string;
+  image?: string;
+  rubrique?: string;
+  dateLabel?: string;
+}
+const { href, title, image, rubrique, dateLabel } = Astro.props;
+---
+<a class="ge-teaser" href={href}>
+  {image && <CoverImage src={image} alt="" width={240} height={160} />}
+  <span>
+    {rubrique && <p class="ge-teaser-rub">{rubrique}</p>}
+    <p class="ge-teaser-titre">{title}</p>
+    {dateLabel && <p class="ge-teaser-rub">{dateLabel}</p>}
+  </span>
+</a>

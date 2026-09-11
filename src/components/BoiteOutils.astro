@@ -1,0 +1,16 @@
+---
+import { SITE_CONFIG } from "../config";
+---
+<section class="ge-atelier">
+  <div class="ge-salon">
+    <div>
+      <h2>{SITE_CONFIG.tools.title}</h2>
+      <p class="ge-atelier-lead">{SITE_CONFIG.tools.lead}</p>
+    </div>
+    <ul>
+      {SITE_CONFIG.tools.items.map((item: string) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+</section>

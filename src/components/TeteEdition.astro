@@ -1,0 +1,21 @@
+---
+import { SITE_TITLE, SITE_CONFIG } from "../config";
+---
+<header>
+  <div class="ge-salon">
+    <div class="ge-folio">
+      <p>Édition France · 100&nbsp;% épargne</p>
+      <nav aria-label="Méthode">
+        <a href="/a-propos/">{SITE_CONFIG.ui.about}</a>
+        <a href="/contact/">{SITE_CONFIG.ui.contact}</a>
+      </nav>
+    </div>
+    <div class="ge-bande">
+      <a class="ge-sigle" href="/" aria-label={SITE_TITLE}>GÉ</a>
+      <a class="ge-wordmark" href="/">
+        <p class="ge-marque"><em>Galaxie</em> Épargne</p>
+      </a>
+      <p class="ge-devise">On range avant d’écrire.</p>
+    </div>
+  </div>
+</header>

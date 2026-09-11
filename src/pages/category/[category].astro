@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import ArticleTeaser from "../../components/ArticleTeaser.astro";
+import { CATEGORIES, SITE_TITLE, SITE_CONFIG } from "../../config";
+import { liveArticles, formatDate } from "../../lib/live";
+
+export async function getStaticPaths() {
+  const posts = liveArticles(await getCollection("articles"));
+  return CATEGORIES.map((c) => ({
+    params: { category: c.slug },
+    props: {
+      rubrique: c,
+      posts: posts.filter((p) => p.data.categorySlug === c.slug),
+    },
+  }));
+}
+
+const { rubrique, posts } = Astro.props;
+const heroTitle = rubrique.hero_title || rubrique.label;
+const seoIntro = rubrique.seo_intro || rubrique.description || "";
+const others = CATEGORIES.filter((c) => c.slug !== rubrique.slug).slice(0, 3);
+---
+<Layout title={`${heroTitle} — ${SITE_TITLE}`} description={seoIntro}>
+  <section class="ge-salon ge-rubrique">
+    <nav class="ge-fil-ariane" aria-label={SITE_CONFIG.ui.breadcrumbAria}>
+      <a href="/">{SITE_CONFIG.ui.home}</a>
+      <span> / </span>
+      <span>{rubrique.label}</span>
+    </nav>
+    <p class="ge-kicker">Tiroir</p>
+    <h1>{heroTitle}</h1>
+    {seoIntro && <p class="ge-intro">{seoIntro}</p>}
+    <div class="ge-fil">
+      {posts.length === 0 && <p class="ge-vide">{SITE_CONFIG.ui.newContentComing}</p>}
+      {posts.map((p) => (
+        <ArticleTeaser
+          href={`/${p.slug}/`}
+          title={p.data.title}
+          excerpt={p.data.excerpt}
+          image={p.data.image}
+          rubrique={p.data.category}
+          dateLabel={formatDate(p.data.date, SITE_CONFIG.locale)}
+        />
+      ))}
+    </div>
+  </section>
+  {others.length > 0 && (
+    <section class="ge-salon ge-bloc">
+      <h2>{SITE_CONFIG.ui.discover}</h2>
+      <div class="ge-tiroirs-grille">
+        {others.map((c) => (
+          <a class="ge-tiroir" href={`/category/${c.slug}/`}>
+            <p class="ge-tiroir-nom">{c.label}</p>
+            <p class="ge-tiroir-texte">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

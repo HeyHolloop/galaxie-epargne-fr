@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import CoverImage from "../components/CoverImage.astro";
+import ArticleTeaser from "../components/ArticleTeaser.astro";
+import { SITE_CONFIG, SITE_TITLE, SITE_URL } from "../config";
+import { liveArticles, formatDate } from "../lib/live";
+import { withOrgAuthor } from "../lib/schema";
+
+export async function getStaticPaths() {
+  const posts = liveArticles(await getCollection("articles"));
+  return posts.map((article) => ({ params: { slug: article.slug }, props: { article } }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const dateLabel = formatDate(article.data.date, SITE_CONFIG.locale);
+const others = liveArticles(await getCollection("articles")).filter((p) => p.slug !== article.slug);
+const same = others.filter((p) => p.data.categorySlug === article.data.categorySlug);
+const related = [...same, ...others.filter((p) => p.data.categorySlug !== article.data.categorySlug)].slice(0, 3);
+const schema = withOrgAuthor(article.data.schemaJson, SITE_TITLE, SITE_URL);
+---
+<Layout
+  title={article.data.metaTitle || article.data.title}
+  description={article.data.excerpt}
+  ogImage={article.data.image}
+  ogType="article"
+>
+  {schema && (
+    <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  )}
+  <article class="ge-article">
+    <nav class="ge-fil-ariane" aria-label={SITE_CONFIG.ui.breadcrumbAria}>
+      <a href="/">{SITE_CONFIG.ui.home}</a>
+      <span> / </span>
+      <a href={`/category/${article.data.categorySlug}/`}>{article.data.category}</a>
+    </nav>
+    <header>
+      <p class="ge-kicker">{article.data.category}</p>
+      <h1>{article.data.title}</h1>
+      <p class="ge-meta">
+        {SITE_CONFIG.ui.publishedBy}
+        <a href="/a-propos/">{SITE_CONFIG.author.name}</a>
+        ·
+        <time datetime={article.data.date.toISOString()}>{dateLabel}</time>
+      </p>
+    </header>
+    {article.data.image && (
+      <CoverImage
+        src={article.data.image}
+        alt={article.data.title}
+        class="ge-article-cover"
+        loading="eager"
+        fetchpriority="high"
+        width={1200}
+        height={800}
+      />
+    )}
+    <div class="ge-corps">
+      <Content />
+    </div>
+    <aside class="ge-encart" role="note">
+      <p>
+        Cet article est fourni à titre informatif et ne constitue pas un conseil personnalisé.
+        Voir aussi nos <a href="/mentions-legales/">{SITE_CONFIG.ui.legalNotice}</a>.
+      </p>
+    </aside>
+  </article>
+  {related.length > 0 && (
+    <section class="ge-suite" aria-labelledby="suite-lecture">
+      <h2 id="suite-lecture">{SITE_CONFIG.ui.alsoRead}</h2>
+      <div class="ge-fil">
+        {related.map((p) => (
+          <ArticleTeaser href={`/${p.slug}/`} title={p.data.title} image={p.data.image} rubrique={p.data.category} />
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

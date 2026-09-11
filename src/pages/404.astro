@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_TITLE } from "../config";
+---
+<Layout title={`Page introuvable — ${SITE_TITLE}`} noindex={true}>
+  <section class="ge-404">
+    <h1>Page introuvable</h1>
+    <p>Ce tiroir est vide. <a href="/">Retour au sommaire</a>.</p>
+  </section>
+</Layout>

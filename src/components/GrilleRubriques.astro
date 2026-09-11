@@ -1,0 +1,29 @@
+---
+import CoverImage from "./CoverImage.astro";
+import { CATEGORIES, SITE_CONFIG } from "../config";
+
+const visuels: Record<string, string> = {
+  "epargne-disponible": "/images/tiroir-disponible.jpg",
+  "epargne-entreprise": "/images/tiroir-entreprise.jpg",
+  "epargne-longue": "/images/tiroir-longue.jpg",
+};
+const romains = ["I", "II", "III"];
+---
+<section class="ge-salon ge-tiroirs" id="rubriques">
+  <div class="ge-ruban">
+    <p>{SITE_CONFIG.ui.categories}</p>
+    <p>Cabinet · trois tiroirs</p>
+  </div>
+  <div class="ge-tiroirs-grille">
+    {CATEGORIES.map((c, i) => (
+      <a class="ge-tiroir" href={`/category/${c.slug}/`}>
+        {visuels[c.slug] && (
+          <CoverImage src={visuels[c.slug]} alt="" width={640} height={400} />
+        )}
+        <p class="ge-tiroir-num">Tiroir {romains[i]}</p>
+        <p class="ge-tiroir-nom">{c.label}</p>
+        <p class="ge-tiroir-texte">{c.description}</p>
+      </a>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_CONFIG, SITE_TITLE } from "../config";
+---
+<Layout title={SITE_CONFIG.ui.contact} description={`Écrire à ${SITE_TITLE}.`}>
+  <section class="ge-legal">
+    <p class="ge-kicker">Courrier</p>
+    <h1>{SITE_CONFIG.ui.contact}</h1>
+    <p>
+      Pour une question éditoriale ou légale, un seul canal&nbsp;:
+    </p>
+    <p>
+      <a href={`mailto:${SITE_CONFIG.contact_email}`}>{SITE_CONFIG.contact_email}</a>
+    </p>
+    <p>
+      Galaxie Épargne n'est pas un conseiller. Nous ne répondons pas par un «&nbsp;faites ceci&nbsp;».
+    </p>
+  </section>
+</Layout>

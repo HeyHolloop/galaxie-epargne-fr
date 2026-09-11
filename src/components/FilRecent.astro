@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArticleTeaser from "./ArticleTeaser.astro";
+import { SITE_CONFIG } from "../config";
+import { formatDate } from "../lib/live";
+
+interface Props {
+  items: CollectionEntry<"articles">[];
+}
+const { items } = Astro.props;
+---
+<section class="ge-salon ge-bloc">
+  <div class="ge-ruban">
+    <p>{SITE_CONFIG.ui.latestArticles}</p>
+    <p>Fil</p>
+  </div>
+  {items.length === 0 && <p class="ge-vide">{SITE_CONFIG.ui.newContentComing}</p>}
+  {items.length > 0 && (
+    <div class="ge-fil">
+      {items.map((p) => (
+        <ArticleTeaser
+          href={`/${p.slug}/`}
+          title={p.data.title}
+          image={p.data.image}
+          rubrique={p.data.category}
+          dateLabel={formatDate(p.data.date, SITE_CONFIG.locale)}
+        />
+      ))}
+    </div>
+  )}
+</section>

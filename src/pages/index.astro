@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import AccrocheHome from "../components/AccrocheHome.astro";
+import GrilleRubriques from "../components/GrilleRubriques.astro";
+import SelectionLue from "../components/SelectionLue.astro";
+import BoiteOutils from "../components/BoiteOutils.astro";
+import PortraitRedac from "../components/PortraitRedac.astro";
+import FilRecent from "../components/FilRecent.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { liveArticles } from "../lib/live";
+
+const posts = liveArticles(await getCollection("articles"));
+const lus = posts.filter((p) => p.data.featured);
+const lusIds = new Set(lus.map((p) => p.slug));
+const recents = posts.filter((p) => !lusIds.has(p.slug)).slice(0, 15);
+---
+<Layout title={`${SITE_TITLE} — ${SITE_DESCRIPTION}`} description={SITE_DESCRIPTION} ogType="website">
+  <AccrocheHome />
+  <GrilleRubriques />
+  <SelectionLue items={lus} />
+  <BoiteOutils />
+  <PortraitRedac />
+  <FilRecent items={recents} />
+</Layout>

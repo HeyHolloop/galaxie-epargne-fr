@@ -1,0 +1,46 @@
+---
+import CoverImage from "./CoverImage.astro";
+import { SITE_CONFIG } from "../config";
+---
+<section class="ge-salon">
+  <div class="ge-hero">
+    <div class="ge-hero-cadre">
+      <CoverImage
+        src={SITE_CONFIG.hero.image}
+        alt="Commode de notaire, tiroirs ouverts, encre et papiers vélin"
+        loading="eager"
+        fetchpriority="high"
+        width={1200}
+        height={800}
+      />
+    </div>
+    <div class="ge-hero-copy">
+      <p class="ge-kicker">Sommaire</p>
+      <h1>{SITE_CONFIG.hero.title}</h1>
+      <p class="ge-chapo">
+        Disponible, entreprise, longue. Un livret n’est pas un PER, un PEL n’est pas de l’argent sous la main.
+        Depuis le 1er&nbsp;août 2026, le Livret A rémunère 1,7&nbsp;% et le LEP reste à 2,5&nbsp;%, selon
+        <a href="https://www.service-public.fr/particuliers/actualites/A18000" rel="dofollow">Service Public</a>.
+        Les PEL ouverts depuis le 1er&nbsp;janvier 2026 sont à 2&nbsp;%, toujours selon
+        <a href="https://www.service-public.fr/particuliers/vosdroits/F16140" rel="dofollow">Service Public</a>.
+        Le PEE, lui, reste bloqué cinq ans&nbsp;:
+        <a href="https://www.service-public.fr/particuliers/vosdroits/F2142" rel="dofollow">Service Public</a>
+        le dit sans détour.
+      </p>
+      <div class="ge-taux">
+        <article>
+          <p class="ge-chiffre">1,7&nbsp;%</p>
+          <p class="ge-libelle">Livret A · août 2026</p>
+        </article>
+        <article>
+          <p class="ge-chiffre">2,5&nbsp;%</p>
+          <p class="ge-libelle">LEP · inchangé</p>
+        </article>
+        <article>
+          <p class="ge-chiffre">2,00&nbsp;%</p>
+          <p class="ge-libelle">PEL 2026</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

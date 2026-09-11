@@ -1,0 +1,17 @@
+---
+import { SITE_CONFIG, SITE_TITLE } from "../config";
+---
+<section class="ge-salon ge-redac">
+  <p class="ge-sigle" aria-hidden="true">GÉ</p>
+  <div>
+    <h2>{SITE_CONFIG.ui.masthead}</h2>
+    <p>
+      {SITE_TITLE} n’est pas un magazine argent / retraite / impôt / immo. C’est un média à trois tiroirs, et seulement trois.
+      Si un sujet ne rentre dans aucun, il n’a pas sa page ici.
+    </p>
+    <p>
+      {SITE_CONFIG.author.bio}
+      <a href="/a-propos/">{SITE_CONFIG.ui.aboutAuthor}</a>.
+    </p>
+  </div>
+</section>

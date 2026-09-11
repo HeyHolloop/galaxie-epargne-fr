@@ -1,0 +1,24 @@
+---
+import { SITE_TITLE, SITE_CONFIG, CATEGORIES } from "../config";
+---
+<footer class="ge-colophon">
+  <div class="ge-salon">
+    <div class="ge-colo-haut">
+      <p class="ge-sigle" aria-hidden="true">GÉ</p>
+      <p class="ge-colo-marque"><em>Galaxie</em> Épargne</p>
+      <p class="ge-colo-note">Média à trois tiroirs. Si un sujet n’entre dans aucun, il n’a pas sa page ici.</p>
+    </div>
+    <nav class="ge-colo-index" aria-label={SITE_CONFIG.ui.categories}>
+      {CATEGORIES.map((c) => (
+        <a href={`/category/${c.slug}/`}>{c.label}</a>
+      ))}
+    </nav>
+    <div class="ge-colo-bas">
+      <a href="/a-propos/">{SITE_CONFIG.ui.masthead}</a>
+      <a href="/mentions-legales/">{SITE_CONFIG.ui.legalNotice}</a>
+      <a href="/politique-de-confidentialite/">{SITE_CONFIG.ui.privacyPolicy}</a>
+      <a href="/contact/">{SITE_CONFIG.ui.contact}</a>
+      <span>{SITE_TITLE} · OVELIUM</span>
+    </div>
+  </div>
+</footer>

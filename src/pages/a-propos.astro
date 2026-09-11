@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_CONFIG, SITE_TITLE, SITE_URL } from "../config";
+import { siteOrganization } from "../lib/schema";
+
+const org = {
+  ...siteOrganization(SITE_TITLE, SITE_URL),
+  "@context": "https://schema.org",
+  description: SITE_CONFIG.author.bio,
+  email: SITE_CONFIG.contact_email,
+};
+---
+<Layout
+  title={`${SITE_CONFIG.ui.masthead} — ${SITE_TITLE}`}
+  description={SITE_CONFIG.author.bio}
+>
+  <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify(org)} />
+  <section class="ge-legal">
+    <p class="ge-kicker">Méthode Galaxie</p>
+    <h1>{SITE_CONFIG.ui.masthead}</h1>
+    <p class="ge-sigle" aria-hidden="true">GÉ</p>
+    <p>
+      Méthode Galaxie&nbsp;: on range avant d'écrire.
+    </p>
+    <p>
+      Galaxie Épargne n'est pas un magazine argent / retraite / impôt / immo. C'est un média à trois tiroirs, et seulement trois. Épargne disponible, épargne d'entreprise, épargne longue. Si un sujet ne rentre dans aucun, il n'a pas sa page ici.
+    </p>
+    <p>
+      On ne part pas d'un personnage inventé. On part d'un produit, d'un plafond, d'une règle publique. Les chiffres viennent d'institutions, pas d'un «&nbsp;on a vu&nbsp;». Galaxie Épargne est une marque, pas un conseiller ni un coach&nbsp;: on n'écrit pas «&nbsp;faites ceci&nbsp;», on écrit où l'argent est coincé, qui a la main, et ce que dit le texte.
+    </p>
+    <p>
+      Le travail de la rédaction, c'est ce classement. Un livret et un PER ne se racontent pas dans le même tiroir. Le reste, c'est de l'enquête et de la clarté, pas une recette miracle.
+    </p>
+  </section>
+</Layout>

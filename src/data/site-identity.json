@@ -1,0 +1,74 @@
+{
+  "site_title": "Galaxie Épargne",
+  "site_url": "https://www.galaxie-epargne.fr",
+  "site_description": "Média français 100 % épargne. Trois tiroirs : disponible, entreprise, longue. On range avant d'écrire.",
+  "locale": "fr-FR",
+  "contact_email": "contact@galaxie-epargne.fr",
+  "legal": {
+    "editor_name": "Galaxie Épargne",
+    "publication_director": "Lomig LE MANAC'H",
+    "host": "o2switch, Chemin des Pardiaux, 63000 Clermont-Ferrand"
+  },
+  "author": {
+    "name": "Galaxie Épargne",
+    "role": "Marque rédaction",
+    "avatar": "",
+    "bio": "Galaxie Épargne est une marque, pas un conseiller. Les articles sont signés au nom du média. On part d'un produit, d'un plafond, d'une règle publique."
+  },
+  "hero": {
+    "title": "L'épargne française tient en trois tiroirs.",
+    "subtitle": "Disponible, entreprise, longue. Un livret n'est pas un PER, un PEL n'est pas de l'argent sous la main. On range avant d'écrire.",
+    "image": "/images/accroche.jpg"
+  },
+  "tools": {
+    "title": "Atelier",
+    "lead": "Des index pour lire un plafond, un taux, un déblocage — sans recette miracle.",
+    "items": [
+      "Index des plafonds réglementés",
+      "Calendrier des taux",
+      "Carte des déblocages"
+    ]
+  },
+  "ui_strings": {
+    "readMore": "Lire la fiche",
+    "publishedBy": "Par",
+    "alsoRead": "Aussi lire",
+    "aboutAuthor": "Méthode",
+    "latestArticles": "Derniers classements",
+    "mostReadArticles": "Plus lus",
+    "recentArticles": "Derniers",
+    "home": "Sommaire",
+    "about": "Méthode",
+    "contact": "Courrier",
+    "categories": "Les trois tiroirs",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "discover": "Les autres tiroirs",
+    "newContentComing": "Les fiches arrivent. Le classement, lui, est déjà là.",
+    "breadcrumbAria": "Fil d'Ariane",
+    "masthead": "La rédaction"
+  },
+  "categories": [
+    {
+      "label": "Épargne disponible",
+      "slug": "epargne-disponible",
+      "description": "Livrets, plafonds, éligibilité LEP. L'argent qu'on peut reprendre. Pas le PEL.",
+      "hero_title": "Épargne disponible",
+      "seo_intro": "Livrets réglementés, plafonds et éligibilité. Ici, l'argent reste sous la main. Le PEL n'entre pas dans ce tiroir."
+    },
+    {
+      "label": "Épargne d'entreprise",
+      "slug": "epargne-entreprise",
+      "description": "PEE, PERCOL, primes, déblocages. L'argent coincé par le contrat de travail.",
+      "hero_title": "Épargne d'entreprise",
+      "seo_intro": "PEE, PERCOL, abondements, primes et cas de déblocage. Qui a la main, et pour combien de temps."
+    },
+    {
+      "label": "Épargne longue",
+      "slug": "epargne-longue",
+      "description": "PER, assurance-vie, PEA, PEL, sorties, transmission. L'argent qui attend.",
+      "hero_title": "Épargne longue",
+      "seo_intro": "PER, assurance-vie, PEA, PEL, sorties et transmission. Le PEL est ici, pas dans le tiroir disponible."
+    }
+  ]
+}
