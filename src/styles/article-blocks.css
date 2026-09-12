@@ -24,20 +24,20 @@
 .ge-essentials { margin: 0 0 2rem 0; padding: 1.5rem 1.4rem; background: #fbf9f4; color: #0a0e17; border-left: 3px solid #8a6914; }
 .ge-essentials__title { margin: 0 0 0.7rem 0; color: #0a0e17; font-family: Newsreader, Palatino, serif; }
 .ge-essentials__list { margin: 0; padding-left: 1.15rem; }
-main a, article a {
-  color: #2563eb !important;
-  text-decoration: underline !important;
+.ge-prose a {
+  color: #2563eb;
+  text-decoration: underline;
   text-underline-offset: 2px;
 }
-main a:hover, article a:hover {
-  color: #1d4ed8 !important;
+.ge-prose a:hover {
+  color: #1d4ed8;
 }
 .ge-shell, .ge-shell__inner, .ge-faq, .ge-callout, .ge-tweet__card,
 .ge-checklist, .ge-table, .ge-essentials, .ge-texte, .ge-verdict {
   color: #1a1a1a;
 }
 .ge-texte { font-weight: 400; }
-.ge-source a, .ge-faq a, .ge-callout a, .ge-essentials a {
-  color: #2563eb !important;
-  text-decoration: underline !important;
+.ge-source a, .ge-faq a, .ge-callout a, .ge-essentials a, .ge-texte a {
+  color: #2563eb;
+  text-decoration: underline;
 }
