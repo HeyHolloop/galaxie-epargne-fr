@@ -1,0 +1,43 @@
+.ge-shell { margin: 0 0 2.5rem 0; }
+.ge-shell__inner { background: #fbf9f4; color: #1a1a1a; padding: 1.8rem 1.6rem; border-left: 3px solid #8a6914; }
+.ge-kicker { margin: 0 0 0.75rem 0; color: #6e5218; font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; }
+.ge-verdict { margin: 0; font-family: Newsreader, Palatino, serif; font-size: 1.28rem; line-height: 1.45; color: #0a0e17; }
+.ge-texte { margin: 1.05rem 0 0 0; color: #0a0e17; line-height: 1.7; }
+.ge-source { margin: 1.3rem 0 0 0; font-size: 0.8rem; color: #3f3a32; }
+.ge-table-wrap { overflow-x: auto; margin: 0 0 2rem 0; border-top: 2px solid #8a6914; background: #fff; }
+.ge-table { width: 100%; border-collapse: collapse; }
+.ge-table th { text-align: left; padding: 0.75rem 0; font-family: Newsreader, Palatino, serif; color: #0a0e17; background: #fbf9f4; }
+.ge-table td { padding: 0.75rem 0; border-bottom: 1px solid #e5ded3; color: #0a0e17; background: #fff; }
+.ge-timeline__row { display: flex; gap: 1rem; margin: 0 0 0.9rem 0; }
+.ge-timeline__num { color: #6e5218; font-weight: 800; }
+.ge-timeline__text { color: #0a0e17; }
+.ge-checklist { list-style: none; margin: 0 0 2rem 0; padding: 0; }
+.ge-checklist li { margin: 0 0 0.5rem 0; padding: 0.4rem 0; border-bottom: 1px solid #e5ded3; color: #0a0e17; }
+.ge-callout { margin: 1.6rem 0; padding: 1rem 0 1rem 1.1rem; border-left: 2px solid #8a6914; background: #fbf9f4; color: #0a0e17; }
+.ge-callout--warn { border-left-color: #7a3b12; }
+.ge-faq { margin: 0 0 1.25rem 0; }
+.ge-faq h3 { margin: 0 0 0.35rem 0; font-family: Newsreader, Palatino, serif; color: #0a0e17; }
+.ge-faq p { margin: 0; color: #0a0e17; }
+.ge-widget-spec { display: none; }
+.ge-infographie__img { width: 100%; height: auto; display: block; }
+.ge-tweet__card { background: #fff; border: 1px solid #e5ded3; padding: 1rem; max-width: 34rem; color: #0a0e17; }
+.ge-essentials { margin: 0 0 2rem 0; padding: 1.5rem 1.4rem; background: #fbf9f4; color: #0a0e17; border-left: 3px solid #8a6914; }
+.ge-essentials__title { margin: 0 0 0.7rem 0; color: #0a0e17; font-family: Newsreader, Palatino, serif; }
+.ge-essentials__list { margin: 0; padding-left: 1.15rem; }
+main a, article a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+main a:hover, article a:hover {
+  color: #1d4ed8 !important;
+}
+.ge-shell, .ge-shell__inner, .ge-faq, .ge-callout, .ge-tweet__card,
+.ge-checklist, .ge-table, .ge-essentials, .ge-texte, .ge-verdict {
+  color: #1a1a1a;
+}
+.ge-texte { font-weight: 400; }
+.ge-source a, .ge-faq a, .ge-callout a, .ge-essentials a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+}

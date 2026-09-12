@@ -1,5 +1,6 @@
 ---
 import "../styles/edition.css";
+import "../styles/article-blocks.css";
 import TeteEdition from "../components/TeteEdition.astro";
 import Colophon from "../components/Colophon.astro";
 import { SITE_TITLE, SITE_URL, SITE_DESCRIPTION, SITE_CONFIG } from "../config";
@@ -79,5 +80,8 @@ const structured = {
       <slot />
     </main>
     <Colophon />
+      <script>
+      import "../scripts/article-blocks.js";
+    </script>
   </body>
 </html>
