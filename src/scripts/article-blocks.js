@@ -4,8 +4,10 @@
   function parseSpec(root) {
     var el = root.querySelector("." + PREFIX + "-widget-spec");
     if (!el) return null;
+    var raw = el.textContent || "";
+    raw = raw.replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&amp;/g, "&");
     try {
-      return JSON.parse(el.textContent);
+      return JSON.parse(raw);
     } catch (e) {
       return null;
     }

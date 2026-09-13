@@ -59,6 +59,40 @@
 .ge-tweet__permalink { display: inline-block; margin-top: 0.7rem; color: #1d9bf0; font-size: 0.9rem; font-weight: 650; text-decoration: none; }
 .ge-tweet__permalink:hover { text-decoration: underline; color: #1d9bf0; }
 .ge-prose a.ge-tweet__permalink { color: #1d9bf0; text-decoration: none; }
+.ge-sim__hint, .ge-quiz__hint {
+  margin: 0.65rem 0 0 0; color: #3f3a32; font-size: 0.95rem; line-height: 1.45; font-weight: 400;
+}
+.ge-sim__form, .ge-quiz__form {
+  display: grid; gap: 1rem; max-width: 26rem; margin: 1.2rem 0 0;
+}
+.ge-sim__form label, .ge-quiz__form label {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  color: #1a1a1a; font-size: 0.92rem; font-weight: 650;
+}
+.ge-sim__form input, .ge-sim__form select, .ge-quiz__form input, .ge-quiz__form select {
+  width: 100%; box-sizing: border-box; padding: 0.85rem 1rem;
+  border: 1px solid #c9c2b4; border-radius: 2px; background: #fff; color: #1a1a1a;
+  font-size: 1.05rem; font-weight: 400; line-height: 1.3; appearance: auto;
+}
+.ge-sim__form small, .ge-quiz__form small {
+  display: block; font-weight: 400; color: #5c564c; font-size: 0.78rem;
+}
+.ge-sim__form button, .ge-quiz__form button {
+  width: 100%; margin-top: 0.15rem; padding: 0.9rem 1.2rem;
+  border: 0; border-radius: 2px; background: #0a0e17; color: #fff;
+  font-weight: 700; font-size: 0.95rem; cursor: pointer; appearance: none;
+}
+.ge-sim__out, .ge-quiz__out {
+  margin: 1.1rem 0 0; max-width: 26rem; padding: 0.95rem 1rem;
+  border: 1px solid #c9c2b4; background: #fff; color: #1a1a1a;
+  font-size: 1.05rem; font-weight: 700; line-height: 1.4;
+}
+.ge-sim__disclaimer, .ge-quiz__disclaimer {
+  margin: 0.85rem 0 0 0; color: #5c564c; font-size: 0.78rem;
+}
+.ge-sim__result { margin: 0; font-size: 1.2rem; font-weight: 700; color: #1a1a1a; }
+.ge-sim__hyps { margin: 0.8rem 0 0; padding-left: 1.25rem; list-style: disc; }
+.ge-sim__hyps li { display: list-item; margin: 0 0 0.45rem; }
 .ge-prose a:not(.ge-tweet__permalink) {
   color: #2563eb;
   text-decoration: underline;
