@@ -22,7 +22,7 @@ const seoIntro = rubrique.seo_intro || rubrique.description || "";
 const isSocle = rubrique.slug === "banque-socle";
 const others = CATEGORIES.filter((c) => c.slug !== rubrique.slug).slice(0, 3);
 ---
-<Layout title={`${heroTitle} — ${SITE_TITLE}`} description={seoIntro}>
+<Layout title={`${heroTitle} | ${SITE_TITLE}`} description={seoIntro}>
   <section class="ge-salon ge-rubrique">
     <nav class="ge-fil-ariane" aria-label={SITE_CONFIG.ui.breadcrumbAria}>
       <a href="/">{SITE_CONFIG.ui.home}</a>

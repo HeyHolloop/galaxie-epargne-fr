@@ -1,6 +1,6 @@
 ---
 title: "Bienvenue sur Galaxie Épargne"
-metaTitle: "Bienvenue — Galaxie Épargne"
+metaTitle: "Bienvenue | Galaxie Épargne"
 excerpt: "Article de démarrage. Il sera remplacé par le pipeline éditorial."
 image: "/images/accroche.jpg"
 category: "Épargne disponible"
