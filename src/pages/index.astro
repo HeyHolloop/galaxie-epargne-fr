@@ -7,19 +7,27 @@ import SelectionLue from "../components/SelectionLue.astro";
 import BoiteOutils from "../components/BoiteOutils.astro";
 import PortraitRedac from "../components/PortraitRedac.astro";
 import FilRecent from "../components/FilRecent.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_CONFIG } from "../config";
 import { liveArticles } from "../lib/live";
 
 const posts = liveArticles(await getCollection("articles"));
 const lus = posts.filter((p) => p.data.featured);
-const lusIds = new Set(lus.map((p) => p.slug));
-const recents = posts.filter((p) => !lusIds.has(p.slug)).slice(0, 15);
+const seo = SITE_CONFIG.homeSeo;
 ---
-<Layout title={`${SITE_TITLE} — ${SITE_DESCRIPTION}`} description={SITE_DESCRIPTION} ogType="website">
+<Layout
+  title={seo.title}
+  description={seo.description}
+  ogTitle={seo.ogTitle}
+  ogDescription={seo.ogDescription}
+  twitterTitle={seo.twitterTitle}
+  twitterDescription={seo.twitterDescription}
+  schemaDescription={seo.schemaDescription}
+  ogType="website"
+>
   <AccrocheHome />
   <GrilleRubriques />
   <SelectionLue items={lus} />
   <BoiteOutils />
   <PortraitRedac />
-  <FilRecent items={recents} />
+  <FilRecent />
 </Layout>

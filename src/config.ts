@@ -41,6 +41,7 @@ export const SITE_CONFIG = {
   locale: identity.locale,
   contact_email: identity.contact_email,
   legal: identity.legal,
+  editionLine: identity.edition_line,
   ui: buildUi(id.ui_strings),
   author: {
     name: identity.author?.name || id.persona?.name || "La rédaction",
@@ -50,6 +51,15 @@ export const SITE_CONFIG = {
   },
   hero: identity.hero,
   tools: identity.tools,
+  homeSeo: {
+    title: identity.home_seo.title,
+    description: identity.home_seo.description,
+    ogTitle: identity.home_seo.og_title,
+    ogDescription: identity.home_seo.og_description,
+    twitterTitle: identity.home_seo.twitter_title,
+    twitterDescription: identity.home_seo.twitter_description,
+    schemaDescription: identity.home_seo.schema_description,
+  },
 };
 
 export const CATEGORIES: {
@@ -58,4 +68,7 @@ export const CATEGORIES: {
   description: string;
   hero_title?: string;
   seo_intro?: string;
+  question?: string;
+  cta?: string;
+  links?: string[];
 }[] = identity.categories || [];

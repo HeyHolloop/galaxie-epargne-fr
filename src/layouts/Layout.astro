@@ -12,6 +12,11 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  schemaDescription?: string;
 }
 
 const {
@@ -20,11 +25,21 @@ const {
   ogImage = SITE_CONFIG.hero.image || "/images/accroche.jpg",
   ogType = "website",
   noindex = false,
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
+  schemaDescription,
 } = Astro.props;
 
 const lang = (SITE_CONFIG.locale || "fr-FR").split("-")[0] || "fr";
 const canonical = new URL(Astro.url.pathname, SITE_URL + "/").href;
 const fullTitle = title.includes(SITE_TITLE) ? title : `${title} | ${SITE_TITLE}`;
+const socialTitle = ogTitle || fullTitle;
+const socialDescription = ogDescription || description;
+const tweetTitle = twitterTitle || socialTitle;
+const tweetDescription = twitterDescription || socialDescription;
+const orgDescription = schemaDescription || description;
 const ogAbs = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
 const org = siteOrganization(SITE_TITLE, SITE_URL);
 const structured = {
@@ -33,7 +48,7 @@ const structured = {
     {
       ...org,
       "@type": "NewsMediaOrganization",
-      description: SITE_DESCRIPTION,
+      description: orgDescription,
     },
     {
       "@type": "WebSite",
@@ -59,16 +74,16 @@ const structured = {
     <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={socialDescription} />
     <meta property="og:image" content={ogAbs} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={SITE_TITLE} />
     <meta property="og:locale" content={SITE_CONFIG.locale.replace("-", "_")} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={tweetTitle} />
+    <meta name="twitter:description" content={tweetDescription} />
     <meta name="twitter:image" content={ogAbs} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(structured)} />
     <slot name="head" />

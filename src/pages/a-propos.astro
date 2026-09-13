@@ -3,31 +3,41 @@ import Layout from "../layouts/Layout.astro";
 import { SITE_CONFIG, SITE_TITLE, SITE_URL } from "../config";
 import { siteOrganization } from "../lib/schema";
 
+const title = `Méthode et à propos - ${SITE_TITLE}`;
+const description =
+  "Galaxie Épargne est une marque indépendante, pas un conseiller. On explique d’où viennent nos chiffres et comment on écrit nos guides.";
+
 const org = {
   ...siteOrganization(SITE_TITLE, SITE_URL),
   "@context": "https://schema.org",
-  description: SITE_CONFIG.author.bio,
+  description,
   email: SITE_CONFIG.contact_email,
 };
 ---
-<Layout
-  title={`${SITE_CONFIG.ui.masthead} — ${SITE_TITLE}`}
-  description={SITE_CONFIG.author.bio}
->
+<Layout title={title} description={description}>
   <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify(org)} />
   <section class="ge-legal">
     <p class="ge-kicker">Méthode Galaxie</p>
-    <h1>{SITE_CONFIG.ui.masthead}</h1>
+    <h1>À propos</h1>
     <p class="ge-sigle" aria-hidden="true">GÉ</p>
     <p>
-      On range avant d’écrire. Disponible, entreprise, longue : trois tiroirs, pas un magazine
-      argent / retraite / impôt / immo. Un livret, un PEE, un PER n’ont pas la même page, parce
-      qu’ils n’ont pas le même délai. Si un sujet n’entre dans aucun tiroir, il n’a pas sa page ici.
+      Galaxie Épargne est un petit média qui ne fait qu’une chose : l’épargne des particuliers en France. Pas d’immobilier, pas de bourse au sens large, pas de crypto. Juste les produits où tu mets de l’argent de côté.
     </p>
     <p>
-      Les textes partent d’un produit, d’un plafond, d’une règle. Pas d’un portrait, pas d’une
-      consigne. Les chiffres viennent d’institutions. Galaxie Épargne est une marque, pas un
-      conseiller : on écrit où l’argent est coincé, qui a la main, et ce que dit le texte.
+      On a tout rangé en trois tiroirs parce que c’est comme ça que la loi le range. Disponible : tu peux reprendre demain. Entreprise : c’est ton employeur qui a la clé. Longue : c’est ton contrat qui a la clé. Un produit ne peut pas être dans deux tiroirs à la fois.
+    </p>
+    <p>
+      Chaque fiche part d’une règle publique. Un arrêté pour un taux de Livret A, le BOFiP pour la fiscalité de l’assurance-vie, une circulaire interministérielle pour le déblocage du PEE. On cite la source tout en haut, avec le lien Legifrance.
+    </p>
+    <p>
+      Banque de France pour les taux réglementés, INSEE pour l’inflation, Direction Générale des Finances Publiques pour les plafonds. On ne reprend jamais un chiffre d’un autre comparateur sans vérifier.
+    </p>
+    <p>
+      Galaxie Épargne est une marque éditoriale, pas un conseiller en gestion de patrimoine. On ne touche pas de commission sur les produits que tu ouvres. Quand il y a un lien affilié, c’est indiqué clairement dans l’article.
+    </p>
+    <p>
+      On se trompe parfois. Quand c’est le cas, on corrige et on le note dans le <a href="/#journal">journal des mises à jour</a> en bas de la home. Tu peux nous écrire pour signaler une erreur ou poser une question :
+      <a href={`mailto:${SITE_CONFIG.contact_email}`}>{SITE_CONFIG.contact_email}</a>
     </p>
   </section>
 </Layout>

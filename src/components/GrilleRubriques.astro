@@ -1,29 +1,36 @@
 ---
 import CoverImage from "./CoverImage.astro";
-import { CATEGORIES, SITE_CONFIG } from "../config";
+import { CATEGORIES } from "../config";
 
 const visuels: Record<string, string> = {
   "epargne-disponible": "/images/tiroir-disponible.jpg",
   "epargne-entreprise": "/images/tiroir-entreprise.jpg",
   "epargne-longue": "/images/tiroir-longue.jpg",
 };
-const romains = ["I", "II", "III"];
 ---
 <section class="ge-salon ge-tiroirs" id="rubriques">
   <div class="ge-ruban">
-    <p>{SITE_CONFIG.ui.categories}</p>
-    <p>Cabinet · trois tiroirs</p>
+    <p>Par où commencer</p>
+    <p>3 entrées</p>
   </div>
   <div class="ge-tiroirs-grille">
-    {CATEGORIES.map((c, i) => (
-      <a class="ge-tiroir" href={`/category/${c.slug}/`}>
+    {CATEGORIES.map((c) => (
+      <article class="ge-tiroir">
         {visuels[c.slug] && (
           <CoverImage src={visuels[c.slug]} alt="" width={640} height={400} />
         )}
-        <p class="ge-tiroir-num">Tiroir {romains[i]}</p>
+        {c.question && <p class="ge-tiroir-question">{c.question}</p>}
         <p class="ge-tiroir-nom">{c.label}</p>
         <p class="ge-tiroir-texte">{c.description}</p>
-      </a>
+        {c.links && c.links.length > 0 && (
+          <ul class="ge-tiroir-liens">
+            {c.links.map((lien) => (
+              <li>{lien}</li>
+            ))}
+          </ul>
+        )}
+        <a class="ge-tiroir-cta" href={`/category/${c.slug}/`}>{c.cta || "Voir les guides"}</a>
+      </article>
     ))}
   </div>
 </section>

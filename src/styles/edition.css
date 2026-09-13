@@ -169,6 +169,20 @@ textarea {
   }
 }
 
+.ge-vif {
+  margin: 1.25rem 0 0;
+  padding: 0.7rem 0.9rem;
+  background: var(--encre);
+  color: var(--velin);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.ge-vif a {
+  color: var(--feuille);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Hero */
 .ge-hero {
   display: grid;
@@ -260,6 +274,12 @@ textarea {
   text-transform: uppercase;
   color: var(--bronze);
 }
+.ge-taux .ge-taux-note {
+  margin-top: 0.45rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--ardoise);
+}
 @media (max-width: 959px) {
   .ge-hero {
     grid-template-columns: 1fr;
@@ -315,12 +335,15 @@ textarea {
 .ge-tiroir:hover {
   background: var(--parchemin);
 }
-.ge-tiroir-num {
-  margin: 0 0 1.1rem;
+.ge-tiroir-num,
+.ge-tiroir-question {
+  margin: 0 0 0.85rem;
   font-family: var(--display);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  color: var(--or);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--bronze);
 }
 .ge-tiroir .ge-tiroir-nom {
   margin: 0;
@@ -333,6 +356,29 @@ textarea {
   margin: 0.85rem 0 0;
   color: var(--ardoise);
   font-size: 0.95rem;
+}
+.ge-tiroir-liens {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.ge-tiroir-liens li {
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--filet);
+  font-size: 0.9rem;
+  color: var(--ardoise);
+}
+.ge-tiroir-cta {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: var(--or);
+  text-underline-offset: 4px;
+}
+.ge-tiroir-cta:hover {
+  color: var(--bronze);
 }
 .ge-tiroir img {
   width: 100%;
@@ -487,6 +533,16 @@ textarea {
   cursor: default;
   pointer-events: none;
 }
+.ge-outil-titre {
+  display: block;
+}
+.ge-outil-desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--body);
+  font-size: 0.85rem;
+  color: #c6c6cc;
+}
 @media (max-width: 767px) {
   .ge-atelier .ge-salon {
     grid-template-columns: 1fr;
@@ -519,6 +575,46 @@ textarea {
   margin: 0.7rem 0 0;
   color: var(--ardoise);
   max-width: 46rem;
+}
+.ge-redac a {
+  color: var(--encre);
+  text-decoration: underline;
+  text-decoration-color: var(--or);
+  text-underline-offset: 4px;
+}
+
+.ge-journal {
+  border-top: 1px solid var(--encre);
+}
+.ge-journal-item {
+  display: block;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--filet);
+}
+.ge-journal-item .ge-teaser-titre {
+  margin: 0.25rem 0 0;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+.ge-journal-item .ge-teaser-rub {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+.ge-journal-item .ge-teaser-titre + .ge-teaser-rub {
+  margin-top: 0.35rem;
+}
+a.ge-journal-item:hover .ge-teaser-titre {
+  text-decoration: underline;
+  text-decoration-color: var(--or);
+  text-underline-offset: 4px;
+}
+#journal,
+#boite-outils {
+  scroll-margin-top: 1rem;
 }
 
 /* Article */

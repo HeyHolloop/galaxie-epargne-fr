@@ -1,9 +1,10 @@
 {
   "site_title": "Galaxie Épargne",
   "site_url": "https://www.galaxie-epargne.fr",
-  "site_description": "Média français 100 % épargne. Trois tiroirs : disponible, entreprise, longue. On range avant d’écrire.",
+  "site_description": "On ne mélange pas tout. Livret A, LEP, PEE, PER, assurance-vie, PEA : chaque produit a sa règle, son plafond, son délai. Guides vérifiés à partir des textes officiels.",
   "locale": "fr-FR",
   "contact_email": "contact@galaxie-epargne.fr",
+  "edition_line": "Édition France — Mise à jour du 13 septembre 2026",
   "legal": {
     "editor_name": "Galaxie Épargne",
     "publication_director": "Lomig LE MANAC’H",
@@ -13,20 +14,39 @@
     "name": "Galaxie Épargne",
     "role": "Marque rédaction",
     "avatar": "",
-    "bio": "Galaxie Épargne est une marque, pas un conseiller. Les articles sont signés au nom du média. On part d’un produit, d’un plafond, d’une règle publique."
+    "bio": "Galaxie Épargne est une marque indépendante, pas un conseiller. On explique d’où viennent nos chiffres et comment on écrit nos guides."
+  },
+  "home_seo": {
+    "title": "Galaxie Épargne - L’épargne française bien rangée : Livret A, LEP, PEE, PER",
+    "description": "On ne mélange pas tout. Livret A, LEP, PEE, PER, assurance-vie, PEA : chaque produit a sa règle, son plafond, son délai. Guides vérifiés à partir des textes officiels.",
+    "og_title": "Galaxie Épargne - L’épargne française bien rangée",
+    "og_description": "Livret A, LEP, PEE, PER, assurance-vie. Chaque produit a sa règle. On explique laquelle, avec la source officielle.",
+    "twitter_title": "Galaxie Épargne",
+    "twitter_description": "L’épargne française bien rangée. Guides vérifiés.",
+    "schema_description": "Média indépendant 100 % épargne française. Guides vérifiés à partir de la Banque de France, Legifrance et du BOFiP."
   },
   "hero": {
-    "title": "L’épargne française tient en trois tiroirs.",
-    "subtitle": "Disponible, entreprise, longue. Un livret n’est pas un PER, un PEL n’est pas de l’argent sous la main. On range avant d’écrire.",
+    "kicker": "Le constat",
+    "title": "L’épargne française est mal rangée partout. On a fait trois tiroirs.",
+    "subtitle": "Un Livret A n’est pas un PER. Un PEE n’est pas de l’argent dispo. On a rangé les produits comme la loi les range : ce que tu peux reprendre demain, ce qui est bloqué par ton employeur, ce qui est bloqué pour longtemps.",
     "image": "/images/accroche.jpg"
   },
   "tools": {
-    "title": "Atelier",
-    "lead": "Des index pour lire un plafond, un taux, un déblocage — sans recette miracle.",
+    "title": "Boîte à outils",
+    "lead": "Pas de simulateur magique. Juste de quoi vérifier un chiffre sans te tromper.",
     "items": [
-      "Index des plafonds réglementés",
-      "Calendrier des taux",
-      "Carte des déblocages"
+      {
+        "title": "Tous les plafonds 2026 en une page",
+        "desc": "Livret A, LEP, LDDS, PEL, PEA, PER. Avec source."
+      },
+      {
+        "title": "Calculateur Livret A et LEP",
+        "desc": "Combien sur 1 an avec 1,7 % et 2,5 %."
+      },
+      {
+        "title": "Carte des déblocages PEE PERCOL",
+        "desc": "Les 9 cas légaux, avec pièces à fournir."
+      }
     ]
   },
   "ui_strings": {
@@ -34,41 +54,62 @@
     "publishedBy": "Par",
     "alsoRead": "Aussi lire",
     "aboutAuthor": "Méthode",
-    "latestArticles": "Derniers classements",
-    "mostReadArticles": "Plus lus",
+    "latestArticles": "Journal",
+    "mostReadArticles": "Cette semaine",
     "recentArticles": "Derniers",
     "home": "Sommaire",
     "about": "Méthode",
     "contact": "Courrier",
-    "categories": "Les trois tiroirs",
+    "categories": "Par où commencer",
     "legalNotice": "Mentions légales",
     "privacyPolicy": "Politique de confidentialité",
     "discover": "Les autres tiroirs",
-    "newContentComing": "Les fiches arrivent. Le classement, lui, est déjà là.",
+    "newContentComing": "Les fiches arrivent.",
     "breadcrumbAria": "Fil d’Ariane",
-    "masthead": "La rédaction"
+    "masthead": "Méthode et à propos"
   },
   "categories": [
     {
       "label": "Épargne disponible",
       "slug": "epargne-disponible",
-      "description": "Livrets, plafonds, éligibilité LEP. L’argent qu’on peut reprendre. Pas le PEL.",
+      "description": "Livret A, LDDS, LEP, CEL. Plafonds, taux, qui peut ouvrir quoi, et les cumuls autorisés.",
       "hero_title": "Épargne disponible",
-      "seo_intro": "Livrets réglementés, plafonds et éligibilité. Ici, l’argent reste sous la main. Le PEL n’entre pas dans ce tiroir."
+      "seo_intro": "Livrets réglementés, plafonds et éligibilité. Ici, l’argent reste sous la main. Le PEL n’entre pas dans ce tiroir.",
+      "question": "Besoin de reprendre ton argent demain ?",
+      "cta": "Voir les guides dispo",
+      "links": [
+        "Livret A plein, que faire ?",
+        "LEP vs Livret A",
+        "Peut-on avoir deux livrets ?"
+      ]
     },
     {
-      "label": "Épargne d’entreprise",
+      "label": "Épargne salariale",
       "slug": "epargne-entreprise",
-      "description": "PEE, PERCOL, primes, déblocages. L’argent coincé par le contrat de travail.",
-      "hero_title": "Épargne d’entreprise",
-      "seo_intro": "PEE, PERCOL, abondements, primes et cas de déblocage. Qui a la main, et pour combien de temps."
+      "description": "PEE, PERCOL, intéressement, participation. Où est ton argent, combien, et comment le débloquer sans frais.",
+      "hero_title": "Épargne salariale",
+      "seo_intro": "PEE, PERCOL, abondements, primes et cas de déblocage. Qui a la main, et pour combien de temps.",
+      "question": "Ton épargne est chez ton employeur ?",
+      "cta": "Voir les guides salariaux",
+      "links": [
+        "Changer d’entreprise, que devient le PEE ?",
+        "Acheter sa résidence principale",
+        "Les 9 cas de déblocage"
+      ]
     },
     {
       "label": "Épargne longue",
       "slug": "epargne-longue",
-      "description": "PER, assurance-vie, PEA, PEL, sorties, transmission. L’argent qui attend.",
+      "description": "PER, assurance-vie, PEA, PEL. Fiscalité à la sortie, succession, quand il vaut mieux ne pas toucher.",
       "hero_title": "Épargne longue",
-      "seo_intro": "PER, assurance-vie, PEA, PEL, sorties et transmission. Le PEL est ici, pas dans le tiroir disponible."
+      "seo_intro": "PER, assurance-vie, PEA, PEL, sorties et transmission. Le PEL est ici, pas dans le tiroir disponible.",
+      "question": "Tu épargnes pour dans 10 ans ?",
+      "cta": "Voir les guides longue",
+      "links": [
+        "PER ou assurance-vie ?",
+        "Fermer un vieux PEL, bonne idée ?",
+        "PEA, plafond et retrait"
+      ]
     }
   ]
 }

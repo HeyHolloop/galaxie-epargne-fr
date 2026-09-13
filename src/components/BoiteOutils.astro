@@ -1,15 +1,18 @@
 ---
 import { SITE_CONFIG } from "../config";
 ---
-<section class="ge-atelier">
+<section class="ge-atelier" id="boite-outils">
   <div class="ge-salon">
     <div>
       <h2>{SITE_CONFIG.tools.title}</h2>
       <p class="ge-atelier-lead">{SITE_CONFIG.tools.lead}</p>
     </div>
     <ul>
-      {SITE_CONFIG.tools.items.map((item: string) => (
-        <li>{item}</li>
+      {SITE_CONFIG.tools.items.map((item) => (
+        <li>
+          <span class="ge-outil-titre">{item.title}</span>
+          <span class="ge-outil-desc">{item.desc}</span>
+        </li>
       ))}
     </ul>
   </div>

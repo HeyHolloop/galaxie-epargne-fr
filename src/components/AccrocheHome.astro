@@ -3,6 +3,10 @@ import CoverImage from "./CoverImage.astro";
 import { SITE_CONFIG } from "../config";
 ---
 <section class="ge-salon">
+  <p class="ge-vif">
+    Cette semaine : Livret A à 1,7&nbsp;% depuis le 1er août, LEP maintenu à 2,5&nbsp;%, PEE et achat de résidence principale.
+    <a href="#journal">Voir le journal des mises à jour</a>
+  </p>
   <div class="ge-hero">
     <div class="ge-hero-cadre">
       <CoverImage
@@ -15,24 +19,24 @@ import { SITE_CONFIG } from "../config";
       />
     </div>
     <div class="ge-hero-copy">
-      <p class="ge-kicker">Sommaire</p>
+      <p class="ge-kicker">{SITE_CONFIG.hero.kicker}</p>
       <h1>{SITE_CONFIG.hero.title}</h1>
-      <p class="ge-chapo">
-        Disponible, entreprise, longue. Un livret n’est pas un PER. Un PEL n’est pas de l’argent sous la main.
-        Trois tiroirs, et on range avant d’écrire.
-      </p>
+      <p class="ge-chapo">{SITE_CONFIG.hero.subtitle}</p>
       <div class="ge-taux">
         <article>
           <p class="ge-chiffre">1,7&nbsp;%</p>
-          <p class="ge-libelle">Livret A · août 2026</p>
+          <p class="ge-libelle">Livret A depuis le 1er août 2026</p>
+          <p class="ge-taux-note">390 euros d’intérêts sur un an pour un livret plein.</p>
         </article>
         <article>
           <p class="ge-chiffre">2,5&nbsp;%</p>
-          <p class="ge-libelle">LEP · inchangé</p>
+          <p class="ge-libelle">LEP</p>
+          <p class="ge-taux-note">Maintenu. Vérifie ton revenu fiscal 2024.</p>
         </article>
         <article>
           <p class="ge-chiffre">2,00&nbsp;%</p>
-          <p class="ge-libelle">PEL 2026</p>
+          <p class="ge-libelle">PEL ouvert en 2026</p>
+          <p class="ge-taux-note">Taux du prêt et de la prime ont aussi changé.</p>
         </article>
       </div>
     </div>
