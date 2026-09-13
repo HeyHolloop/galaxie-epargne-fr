@@ -2,12 +2,12 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ArticleTeaser from "../../components/ArticleTeaser.astro";
-import { CATEGORIES, SITE_TITLE, SITE_CONFIG } from "../../config";
+import { CATEGORIES, RUBRIQUES, SITE_TITLE, SITE_CONFIG } from "../../config";
 import { liveArticles, formatDate } from "../../lib/live";
 
 export async function getStaticPaths() {
   const posts = liveArticles(await getCollection("articles"));
-  return CATEGORIES.map((c) => ({
+  return RUBRIQUES.map((c) => ({
     params: { category: c.slug },
     props: {
       rubrique: c,
@@ -19,6 +19,7 @@ export async function getStaticPaths() {
 const { rubrique, posts } = Astro.props;
 const heroTitle = rubrique.hero_title || rubrique.label;
 const seoIntro = rubrique.seo_intro || rubrique.description || "";
+const isSocle = rubrique.slug === "banque-socle";
 const others = CATEGORIES.filter((c) => c.slug !== rubrique.slug).slice(0, 3);
 ---
 <Layout title={`${heroTitle} — ${SITE_TITLE}`} description={seoIntro}>
@@ -28,7 +29,7 @@ const others = CATEGORIES.filter((c) => c.slug !== rubrique.slug).slice(0, 3);
       <span> / </span>
       <span>{rubrique.label}</span>
     </nav>
-    <p class="ge-kicker">Tiroir</p>
+    <p class="ge-kicker">{isSocle ? "Socle" : "Tiroir"}</p>
     <h1>{heroTitle}</h1>
     {seoIntro && <p class="ge-intro">{seoIntro}</p>}
     <div class="ge-fil">

@@ -1,18 +1,21 @@
 ---
-import { SITE_TITLE, SITE_CONFIG, CATEGORIES } from "../config";
+import { SITE_TITLE, SITE_CONFIG, CATEGORIES, SOCLE } from "../config";
 ---
 <footer class="ge-colophon">
   <div class="ge-salon">
     <div class="ge-colo-haut">
       <p class="ge-sigle" aria-hidden="true">GÉ</p>
       <p class="ge-colo-marque"><em>Galaxie</em> Épargne</p>
-      <p class="ge-colo-note">On ne parle que d’épargne française. Si ça ne rentre dans aucun tiroir, on n’en fait pas un article.</p>
+      <p class="ge-colo-note">Média à trois tiroirs posés sur un socle : le compte courant qui fait circuler l’épargne. Si un sujet ne touche pas ton épargne, il n’a pas sa page ici.</p>
     </div>
     <nav class="ge-colo-index" aria-label={SITE_CONFIG.ui.categories}>
       {CATEGORIES.map((c) => (
         <a href={`/category/${c.slug}/`}>{c.label}</a>
       ))}
     </nav>
+    <p class="ge-colo-socle">
+      <a href={`/category/${SOCLE.slug}/`}>{SOCLE.label} — compte courant</a>
+    </p>
     <div class="ge-colo-bas">
       <a href="/a-propos/">{SITE_CONFIG.ui.masthead}</a>
       <a href="/mentions-legales/">{SITE_CONFIG.ui.legalNotice}</a>

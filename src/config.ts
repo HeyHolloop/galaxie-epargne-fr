@@ -62,7 +62,7 @@ export const SITE_CONFIG = {
   },
 };
 
-export const CATEGORIES: {
+export type Rubrique = {
   label: string;
   slug: string;
   description: string;
@@ -71,4 +71,8 @@ export const CATEGORIES: {
   question?: string;
   cta?: string;
   links?: string[];
-}[] = identity.categories || [];
+};
+
+export const CATEGORIES: Rubrique[] = identity.categories || [];
+export const SOCLE: Rubrique = identity.socle;
+export const RUBRIQUES: Rubrique[] = [...CATEGORIES, SOCLE];

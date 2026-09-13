@@ -397,6 +397,42 @@ textarea {
   }
 }
 
+.ge-socle {
+  padding: 1.35rem 1.5rem 1.5rem;
+  background: var(--parchemin);
+  border: 1px solid var(--filet);
+  border-top: 0;
+}
+.ge-socle-corps {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.5rem 2.5rem;
+  align-items: start;
+}
+.ge-socle .ge-tiroir-nom {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.ge-socle .ge-tiroir-texte {
+  margin: 0.55rem 0 0;
+  color: var(--ardoise);
+  font-size: 0.95rem;
+}
+.ge-socle .ge-tiroir-liens {
+  margin-top: 0;
+}
+.ge-socle .ge-tiroir-cta {
+  margin-top: 0.85rem;
+}
+@media (max-width: 767px) {
+  .ge-socle-corps {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Plus lus / derniers */
 .ge-bloc {
   margin: 4rem 0 0;
@@ -801,7 +837,7 @@ a.ge-journal-item:hover .ge-teaser-titre {
 }
 .ge-colo-note {
   margin: 0;
-  max-width: 16rem;
+  max-width: 20rem;
   text-align: right;
   font-size: 0.85rem;
   color: #c6c6cc;
@@ -820,6 +856,17 @@ a.ge-journal-item:hover .ge-teaser-titre {
   font-size: 1.2rem;
 }
 .ge-colo-index a:hover {
+  color: var(--feuille);
+}
+.ge-colo-socle {
+  margin: 0;
+  padding: 0.85rem 0 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #c6c6cc;
+}
+.ge-colo-socle a:hover {
   color: var(--feuille);
 }
 .ge-colo-bas {

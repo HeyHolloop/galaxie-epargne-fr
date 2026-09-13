@@ -1,6 +1,6 @@
 ---
 import CoverImage from "./CoverImage.astro";
-import { CATEGORIES } from "../config";
+import { CATEGORIES, SOCLE } from "../config";
 
 const visuels: Record<string, string> = {
   "epargne-disponible": "/images/tiroir-disponible.jpg",
@@ -33,4 +33,23 @@ const visuels: Record<string, string> = {
       </article>
     ))}
   </div>
+  <article class="ge-socle">
+    {SOCLE.question && <p class="ge-tiroir-question">{SOCLE.question}</p>}
+    <div class="ge-socle-corps">
+      <div>
+        <p class="ge-tiroir-nom">{SOCLE.label}</p>
+        <p class="ge-tiroir-texte">{SOCLE.description}</p>
+      </div>
+      <div>
+        {SOCLE.links && SOCLE.links.length > 0 && (
+          <ul class="ge-tiroir-liens">
+            {SOCLE.links.map((lien) => (
+              <li>{lien}</li>
+            ))}
+          </ul>
+        )}
+        <a class="ge-tiroir-cta" href={`/category/${SOCLE.slug}/`}>{SOCLE.cta}</a>
+      </div>
+    </div>
+  </article>
 </section>

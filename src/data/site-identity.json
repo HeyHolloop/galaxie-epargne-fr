@@ -18,7 +18,7 @@
   },
   "home_seo": {
     "title": "Galaxie Épargne - L’épargne française bien rangée : Livret A, LEP, PEE, PER",
-    "description": "On ne mélange pas tout. Livret A, LEP, PEE, PER, assurance-vie, PEA : chaque produit a sa règle, son plafond, son délai. Guides vérifiés à partir des textes officiels.",
+    "description": "Livret A, LEP, PEE, PER, assurance-vie : chaque produit a sa règle. Et le compte courant qui va avec. Guides vérifiés à partir des textes officiels.",
     "og_title": "Galaxie Épargne - L’épargne française bien rangée",
     "og_description": "Livret A, LEP, PEE, PER, assurance-vie. Chaque produit a sa règle. On explique laquelle, avec la source officielle.",
     "twitter_title": "Galaxie Épargne",
@@ -111,5 +111,19 @@
         "PEA, plafond et retrait"
       ]
     }
-  ]
+  ],
+  "socle": {
+    "label": "Le socle",
+    "slug": "banque-socle",
+    "description": "Le compte qui reçoit ton salaire et alimente tes livrets. Cartes, retraits, virements, frais. On n’en parle que quand ça touche directement ton épargne.",
+    "hero_title": "Le socle",
+    "seo_intro": "Les trois tiroirs sont posés sur un socle : le compte courant. On en parle uniquement quand ça sert l’épargne. Pas de comparatif « meilleure banque ».",
+    "question": "Et ton compte courant dans tout ça ?",
+    "cta": "Voir le socle",
+    "links": [
+      "Combien laisser sur son compte courant ?",
+      "Carte à débit immédiat ou différé pour épargner ?",
+      "Les frais bancaires qui bouffent ton épargne"
+    ]
+  }
 }
