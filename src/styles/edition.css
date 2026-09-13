@@ -302,7 +302,7 @@ textarea {
 
 /* Tiroirs */
 .ge-tiroirs {
-  margin: 4rem 0 0;
+  margin-top: 4rem;
 }
 .ge-ruban {
   display: flex;
@@ -435,7 +435,7 @@ textarea {
 
 /* Plus lus / derniers */
 .ge-bloc {
-  margin: 4rem 0 0;
+  margin-top: 4rem;
 }
 .ge-selection {
   display: grid;
@@ -587,7 +587,7 @@ textarea {
 
 /* Rédaction */
 .ge-redac {
-  margin: 4rem 0 0;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.75rem;
@@ -754,7 +754,8 @@ a.ge-journal-item:hover .ge-teaser-titre {
 
 /* Rubrique */
 .ge-rubrique {
-  margin: 2.5rem 0 4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
 }
 .ge-rubrique h1 {
   margin: 0.4rem 0 0.7rem;
