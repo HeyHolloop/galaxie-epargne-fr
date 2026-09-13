@@ -93,13 +93,15 @@
 .ge-sim__result { margin: 0; font-size: 1.2rem; font-weight: 700; color: #1a1a1a; }
 .ge-sim__hyps { margin: 0.8rem 0 0; padding-left: 1.25rem; list-style: disc; }
 .ge-sim__hyps li { display: list-item; margin: 0 0 0.45rem; }
-.ge-prose a:not(.ge-tweet__permalink) {
+.ge-prose a:not(.ge-tweet__permalink), .ge-corps a:not(.ge-tweet__permalink) {
   color: #2563eb;
   text-decoration: underline;
+  text-decoration-color: #2563eb;
   text-underline-offset: 2px;
 }
-.ge-prose a:not(.ge-tweet__permalink):hover {
+.ge-prose a:not(.ge-tweet__permalink):hover, .ge-corps a:not(.ge-tweet__permalink):hover {
   color: #1d4ed8;
+  text-decoration-color: #1d4ed8;
 }
 .ge-shell, .ge-shell__inner, .ge-faq, .ge-callout,
 .ge-checklist, .ge-table, .ge-essentials, .ge-texte, .ge-verdict {
@@ -109,4 +111,5 @@
 .ge-source a, .ge-faq a, .ge-callout a, .ge-essentials a, .ge-texte a {
   color: #2563eb;
   text-decoration: underline;
+  text-decoration-color: #2563eb;
 }
