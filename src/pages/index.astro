@@ -11,7 +11,7 @@ import { SITE_CONFIG } from "../config";
 import { liveArticles } from "../lib/live";
 
 const posts = liveArticles(await getCollection("articles"));
-const lus = posts.filter((p) => p.data.featured);
+const recents = posts.slice(0, 15);
 const seo = SITE_CONFIG.homeSeo;
 ---
 <Layout
@@ -26,7 +26,7 @@ const seo = SITE_CONFIG.homeSeo;
 >
   <AccrocheHome />
   <GrilleRubriques />
-  <SelectionLue items={lus} />
+  {recents.length > 0 && <SelectionLue items={recents} />}
   <BoiteOutils />
   <PortraitRedac />
   <FilRecent />
