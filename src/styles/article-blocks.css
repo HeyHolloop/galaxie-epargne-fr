@@ -15,11 +15,14 @@
 .ge-table { width: 100%; border-collapse: collapse; }
 .ge-table th { text-align: left; padding: 0.75rem 1rem; font-family: Newsreader, Palatino, serif; color: #0a0e17; background: #fbf9f4; }
 .ge-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e5ded3; color: #0a0e17; background: #fff; }
-.ge-timeline__row { display: flex; gap: 1rem; margin: 0 0 0.95rem 0; align-items: flex-start; }
-.ge-timeline__num { min-width: 1.6rem; color: #6e5218; font-weight: 800; font-family: Newsreader, Palatino, serif; font-size: 1.25rem; line-height: 1.3; }
+.ge-timeline__row { display: flex; gap: 1rem; margin: 0; padding: 0 0 1.05rem 0; align-items: flex-start; position: relative; }
+.ge-timeline__row:last-child { padding-bottom: 0; }
+.ge-timeline__row:not(:last-child)::before { content: ""; position: absolute; left: 0.8rem; top: 1.45rem; bottom: 0; width: 1px; background: #c4b89a; }
+.ge-timeline__num { position: relative; z-index: 1; min-width: 1.6rem; color: #6e5218; font-weight: 800; font-family: Newsreader, Palatino, serif; font-size: 1.25rem; line-height: 1.3; }
 .ge-timeline__text { color: #0a0e17; margin: 0.15rem 0 0 0; }
-.ge-checklist { list-style: none; margin: 0 0 2rem 0; padding: 0; }
-.ge-checklist li { display: block; margin: 0 0 0.5rem 0; padding: 0.45rem 0; border-bottom: 1px solid #e5ded3; color: #0a0e17; }
+ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5rem 1.35rem 2.35rem; background: #fbf9f4; border-left: 3px solid #8a6914; color: #0a0e17; }
+.ge-checklist li { display: list-item; margin: 0 0 0.55rem 0; padding: 0; border-bottom: none; color: #0a0e17; line-height: 1.65; }
+.ge-checklist li:last-child { margin-bottom: 0; }
 .ge-callout { margin: 1.75rem 0; padding: 0.2rem 0 0.2rem 1.15rem; border-left: 2px solid #8a6914; background: transparent; color: #0a0e17; }
 .ge-callout--warn { border-left-color: #7a3b12; }
 .ge-faq { margin: 0 0 1.7rem 0; }
