@@ -31,6 +31,9 @@ ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5re
 .ge-widget-spec { display: none; }
 .ge-infographie { margin: 0 0 2.25rem 0; }
 .ge-infographie__img { width: 100%; height: auto; display: block; }
+.ge-infographie:has(.ge-infographie__img) .ge-infographie__texts {
+  display: none;
+}
 .ge-essentials { margin: 0 0 2.25rem 0; padding: 1.5rem 1.5rem; background: #fbf9f4; color: #0a0e17; border-left: 3px solid #8a6914; }
 .ge-essentials__title { margin: 0 0 0.7rem 0; color: #0a0e17; font-family: Newsreader, Palatino, serif; }
 .ge-essentials__list { margin: 0; padding-left: 1.35rem; list-style: disc; }
