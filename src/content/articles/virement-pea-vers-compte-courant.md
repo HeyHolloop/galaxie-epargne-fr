@@ -98,7 +98,7 @@ Après 5 ans, la règle change : le retrait partiel laisse le PEA ouvert, permet
 </tbody>
 </table></div>
 <p>Imaginons la situation d'un investisseur disposant de 2 000 euros en liquidités sur son compte espèces PEA après avoir vendu quelques actions. Son plan a seulement trois ans de détention.</p>
-<p>Pour régler une dépense urgente, il demande à sa banque de virer ces 2 000 euros vers son compte courant, pensant ne toucher qu'au solde disponible sans toucher aux titres restants.</p>
+<p>Pour régler une dépense urgente, sans peser s'il vaut mieux <a href="/vaut-il-mieux-emprunter-ou-utiliser-son-epargne/">emprunter ou utiliser son épargne</a>, il demande à sa banque de virer ces 2 000 euros vers son compte courant, pensant ne toucher qu'au solde disponible sans toucher aux titres restants.</p>
 <p>Le piège se referme instantanément : la loi ne fait aucune différence entre le cash et les actions. Ce simple virement provoque la clôture définitive de tout le PEA.</p>
 <p>L'administration fiscale calcule le gain net sur l'ensemble de l'enveloppe, en comparant sa valeur totale aux versements cumulés. Les titres restants basculent sur un compte ordinaire et l'avantage fiscal est anéanti.</p>
 <p>Consultez votre dernier relevé pour relever la date exacte de votre premier versement avant de saisir le moindre ordre de virement.</p>
