@@ -27,7 +27,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/peut-on-avoir-un
 <p>La banque refuse tout virement ou prélèvement demandé par le conjoint non titulaire. Sans procuration officielle ou décision judiciaire de protection, votre partenaire n'a aucun bouton d'action sur votre compte.</p>
 <h2>Le nom sur le compte ne dit pas à qui est l'argent</h2>
 <p>Vous regardez votre relevé bancaire avec votre nom imprimé en haut à gauche. Ce nom fonctionne comme une simple clé de gestion, pas comme un titre de propriété sur les sommes inscrites.</p>
-<p>La nuance trompe beaucoup de couples. L'intitulé du compte indique qui a le pouvoir d'agir au guichet, mais il ne suffit pas pour déterminer la propriété des fonds déposés.</p>
+<p>La nuance trompe beaucoup de couples. L'intitulé du compte indique qui a le pouvoir d'agir au guichet, mais il ne suffit pas pour déterminer <a href="/desequilibre-financier-dans-le-couple/">la propriété des fonds déposés</a>.</p>
 <p>En cas de séparation ou de conflit, les juges et les notaires ne regardent pas l'étiquette du RIB. Ils remontent l'origine exacte des sommes versées pour trancher.</p>
 <p>Le cas officiel de Monsieur X, détaillé par Service-Public, illustre cette mécanique quotidienne. Marié sous la communauté réduite aux acquêts, il fait fonctionner seul son compte courant personnel.</p>
 <p>Pourtant, les salaires qu'il y dépose restent juridiquement des biens communs. Vous pouvez régler vos courses du jour sans demander d'accord, mais cet argent ne devient pas votre bas de laine exclusif.</p>
@@ -36,7 +36,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/peut-on-avoir-un
 <figure class="ge-infographie"><figcaption>Compte perso une fois marié : 4 règles, pas une de plus</figcaption><img alt="Compte perso une fois marié : 4 règles, pas une de plus" class="ge-infographie__img" src="/images/peut-on-avoir-un-compte-personnel-quand-on-est-marie-secondary.jpg"/></figure>
 <h2>Salaire et économies : à vous ou aux deux, selon le régime</h2>
 <p>La plupart des ménages en France se marient sans passer devant un notaire. Sans contrat préalable, vous vivez automatiquement sous le régime légal de la communauté réduite aux acquêts.</p>
-<p>Dans ce cadre, vos salaires, pensions de retraite et économies réalisées pendant le mariage sont des biens communs. Même déposés sur un compte personnel, ces fonds appartiennent pour moitié à votre conjoint.</p>
+<p>Dans ce cadre, vos salaires, pensions de retraite et économies réalisées pendant le mariage sont des biens communs. Même déposés sur un compte personnel, ces fonds appartiennent pour moitié à votre conjoint, que vous les laissiez dormir ou que vous choisissiez d'<a href="/vaut-il-mieux-emprunter-ou-utiliser-son-epargne/">emprunter ou d'utiliser cette épargne</a>.</p>
 <p>Si un seul conjoint perçoit des revenus et épargne, l'argent accumulé se divise tout de même par deux lors d'un partage. Seuls les héritages, donations ou fonds possédés avant l'union restent des biens propres.</p>
 <p>La séparation de biens obéit à une logique radicalement opposée. Fixé par contrat notarié, ce régime permet à chaque époux de conserver la propriété exclusive de ses gains professionnels.</p>
 <p>Votre virement de salaire vous appartient alors réellement au centime près, sous réserve de payer votre part des charges du ménage. Si l'origine d'un solde reste floue, la loi le présume indivis par moitié.</p>
