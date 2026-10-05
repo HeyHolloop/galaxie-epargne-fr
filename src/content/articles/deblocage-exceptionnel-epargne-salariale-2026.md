@@ -29,7 +29,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/déblocage-excep
 <h2>Même voté, tout votre PEE ne serait pas déblocable</h2>
 <p>Si la loi était promulguée un jour, vous ne pourriez pas vider l'intégralité de votre plan d'épargne entreprise. Le texte sénatorial n'est pas une porte ouverte sur toutes vos économies professionnelles.</p>
 <p>L'article 1er du projet n° 2625 cible strictement deux éléments : votre participation et votre intéressement affectés avant le 1er janvier 2026. L'abondement versé par votre employeur, vos versements volontaires par carte bancaire et la prime de partage de la valeur restent verrouillés.</p>
-<p>Votre plan d'épargne retraite d'entreprise est également exclu. Qu'il s'agisse d'un Perco ou d'un PER obligatoire, ces compartiments de retraite restent intouchables dans ce texte.</p>
+<p>Votre plan d'épargne retraite d'entreprise est également exclu. Qu'il s'agisse d'un Perco ou d'un PER obligatoire, ces compartiments de retraite restent intouchables dans ce texte. Pour un Perco, seuls <a href="/perco-cas-de-deblocage/">les cinq cas de déblocage anticipé</a> restent applicables aujourd'hui.</p>
 <p>Le plafond de 5 000 € net de prélèvements sociaux fait couler beaucoup d'encre. Pourtant, ce montant n'est qu'une option d'un texte en navette, que les députés peuvent raboter, relever ou supprimer à tout moment.</p>
 <p>Vos avoirs sont investis en actions de votre entreprise ? Vous ne pourrez pas décider seul de votre retrait, même en cas d'adoption finale.</p>
 <p>L'article 1er subordonne la sortie des titres de l'entreprise ou de certains fonds collectifs à un accord collectif ou à une décision unilatérale de l'employeur. Votre direction garde la main sur la disponibilité de ces actions.</p>
