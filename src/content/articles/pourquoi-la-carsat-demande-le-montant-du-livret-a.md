@@ -35,7 +35,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/pourquoi-la-cars
 </tbody>
 </table></div>
 <p>Dans la réversion de base, l'origine de l'argent est capitale. L'article R. 353-1 du <a href="https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006156618">Code de la sécurité sociale</a> exclut les biens acquis du chef du conjoint décédé.</p>
-<p>Les sommes issues de la communauté après le décès ne doivent donc pas figurer sur le formulaire. En revanche, votre Livret A personnel et vos fonds propres restent soumis à la déclaration.</p>
+<p>Les sommes issues de la communauté après le décès ne doivent donc pas figurer sur le formulaire. En revanche, votre Livret A personnel et vos fonds propres restent soumis à la déclaration. Avoir <a href="/peut-on-avoir-un-compte-personnel-quand-on-est-marie/">un compte personnel une fois marié</a> ne transforme pas cette épargne en bien propre.</p>
 <p>Pour l'Aspa, le tri est différent. La caisse totalise les ressources du ménage actuel, sans faire de distinction entre biens propres et biens communs.</p>
 <p>Cette distinction entre les caisses provoque souvent de la colère au moment de liquider les droits : beaucoup croient que la réversion n'a rien à voir avec l'épargne personnelle.</p>
 <p>C'est vrai pour la complémentaire <a href="https://www.agirc-arrco.fr/particuliers/demander-retraite/pension-reversion/">Agirc-Arrco</a>, qui verse ses droits sans regarder votre patrimoine. Mais c'est faux pour la Carsat, où la loi impose un plafond de revenus.</p>
