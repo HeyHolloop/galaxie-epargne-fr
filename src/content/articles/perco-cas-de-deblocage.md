@@ -126,7 +126,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/perco-cas-de-dé
 <td>Non</td>
 </tr>
 <tr>
-<td>Déblocage exceptionnel de 5 000 €</td>
+<td><a href="/deblocage-exceptionnel-epargne-salariale-2026/">Déblocage exceptionnel de 5 000 €</a></td>
 <td>Projet hors retraite</td>
 <td>Non</td>
 </tr>
