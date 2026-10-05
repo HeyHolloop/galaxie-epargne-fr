@@ -43,7 +43,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/peut-on-ouvrir-p
 </table></div>
 <p>Attention aux personnes à charge. Un enfant, un étudiant, un apprenti ou un adulte rattaché au foyer des parents ne peut pas ouvrir de livret. Il doit attendre d'avoir sa déclaration séparée et son propre avis d'imposition pour y prétendre.</p>
 <p>Rien ne vous empêche de combiner les produits d'épargne réglementés. Vous avez le droit d'associer votre livret d'épargne populaire avec un Livret A ou un LDDS dans votre banque. En revanche, ouvrir deux comptes de la même catégorie reste illégal.</p>
-<div class="ge-callout ge-callout--warn"><strong>Vérification préalable</strong><p>Les concubins forment deux foyers distincts et ne profitent pas du statut de couple marié. Chaque adulte éligible ouvre alors son propre compte individuel.</p></div>
+<div class="ge-callout ge-callout--warn"><strong>Vérification préalable</strong><p>Les concubins forment deux foyers distincts et ne profitent pas du statut de couple marié. Chaque adulte éligible ouvre alors son propre compte individuel. Le mariage n'empêche pas d'<a href="https://www.galaxie-epargne.fr/peut-on-avoir-un-compte-personnel-quand-on-est-marie/">avoir un compte personnel</a> sans l'accord du conjoint.</p></div>
 <h2>Plusieurs LEP déjà ouverts : 2 mois pour régulariser</h2>
 <p>Vous avez ouvert deux comptes par mégarde lors d'un changement d'agence ? Ce doublon ne passera pas inaperçu. Les banques ont le devoir de contrôler vos détentions en interrogeant les services fiscaux lors de la souscription.</p>
 <p>Ce parcours montre comment l'administration et votre agence bancaire traitent un doublon constaté sur vos comptes d'épargne réglementés.</p>
