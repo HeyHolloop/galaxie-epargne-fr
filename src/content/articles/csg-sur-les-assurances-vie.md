@@ -53,7 +53,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/csg-sur-les-assu
 </table></div>
 <p>Le logo d'un assureur sur un contrat ne garantit pas ce taux réduit. Certains produits voisins basculent vers la tranche supérieure.</p>
 <p>Un plan d'épargne retraite assurantiel relève ainsi du barème général à 18,6 %. Vérifiez la dénomination juridique exacte inscrite sur vos conditions générales.</p>
-<div class="ge-callout ge-callout--warn"><strong>Vérifier le libellé</strong><p>Les contrats d'épargne-handicap et de rente-survie subissent le taux global de 18,6 %, sans dérogation.</p></div>
+<div class="ge-callout ge-callout--warn"><strong>Vérifier le libellé</strong><p>Les contrats d'épargne-handicap et de rente-survie subissent le taux global de 18,6 %, sans dérogation. Ces contrats ont aussi leurs règles de <a href="https://www.galaxie-epargne.fr/epargne-handicap-et-aah/">cumul épargne handicap et AAH</a>.</p></div>
 <h2>Fonds en euros ou unités de compte : l'argent ne sort pas au même moment</h2>
 <p>Votre contrat loge souvent deux moteurs financiers très différents. L'administration ne leur applique pas le même calendrier de prélèvement.</p>
 <p>Sur un fonds en euros garanti, l'assureur retranche les prélèvements sociaux lors de l'inscription des intérêts au contrat, comme le prévoit le <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053584839">code de la sécurité sociale</a>. Vous recevez un rendement net sans signer de document.</p>
@@ -89,7 +89,7 @@ schemaJson: {"@graph": [{"@id": "https://www.galaxie-epargne.fr/csg-sur-les-assu
 <p>Cette inquiétude repose sur un malentendu. Le prélèvement ne vise jamais le capital que vous avez versé au départ, frais d'entrée inclus.</p>
 <p><strong>Exemple pédagogique, pas votre net garanti</strong></p>
 <p>Imaginons un contrat d'une valeur totale de 50 000 €, constitué de 40 000 € de versements et 10 000 € d'intérêts. Vous demandez un rachat partiel de 10 000 €.</p>
-<p>L'assureur calcule la part exacte de gain comprise dans ce retrait partiel. La quote-part de produit taxable ressort ici à 2 000 €.</p>
+<p>L'assureur calcule la part exacte de gain comprise dans ce retrait partiel. La quote-part de produit taxable ressort ici à 2 000 €, comme dans tout <a href="https://www.galaxie-epargne.fr/comment-calculer-rachat-partiel-assurance-vie/">calcul de rachat partiel</a>.</p>
 <p>Les 17,2 % de prélèvements sociaux frappent exclusivement ces 2 000 € de gain. Vos 8 000 € de capital restitué restent intacts.</p>
 <div class="ge-callout"><strong>Abattement d'impôt</strong><p>L'abattement fiscal après huit ans efface l'impôt sur le revenu, mais les prélèvements sociaux restent dus sur 100 % des gains, d'après le <a href="https://bofip.impots.gouv.fr/bofip/3951-PGP.html/identifiant%3DBOI-RPPM-RCM-20-10-20-50-20191220">BOFiP</a>.</p></div>
 <p>Une fraction de CSG à hauteur de 6,8 points devient déductible du revenu global sous une condition stricte, selon <a href="https://www.impots.gouv.fr/particulier/les-revenus-mobiliers">la DGFiP</a>. Vous devez choisir l'imposition au barème progressif.</p>
