@@ -18,6 +18,7 @@ const dateLabel = formatDate(article.data.date, SITE_CONFIG.locale);
 const others = liveArticles(await getCollection("articles")).filter((p) => p.slug !== article.slug);
 const same = others.filter((p) => p.data.categorySlug === article.data.categorySlug);
 const related = [...same, ...others.filter((p) => p.data.categorySlug !== article.data.categorySlug)].slice(0, 3);
+const recents = others.slice(0, 5);
 const schema = withOrgAuthor(article.data.schemaJson, SITE_TITLE, SITE_URL);
 ---
 <Layout
@@ -29,6 +30,7 @@ const schema = withOrgAuthor(article.data.schemaJson, SITE_TITLE, SITE_URL);
   {schema && (
     <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
   )}
+  <div class="ge-article-cadre">
   <article class="ge-article">
     <nav class="ge-fil-ariane" aria-label={SITE_CONFIG.ui.breadcrumbAria}>
       <a href="/">{SITE_CONFIG.ui.home}</a>
@@ -63,6 +65,24 @@ const schema = withOrgAuthor(article.data.schemaJson, SITE_TITLE, SITE_URL);
       <p><strong>Point important.</strong> Ceci décrit le droit commun, pas votre contrat. Un plafond cité ici ne dit pas ce que votre banque acceptera sur votre compte. Demandez-leur, ou à un conseiller.</p>
     </aside>
   </article>
+  {recents.length > 0 && (
+    <aside class="ge-rail" aria-label={SITE_CONFIG.ui.latestArticles}>
+      <p class="ge-rail__titre">{SITE_CONFIG.ui.latestArticles}</p>
+      <ul>
+        {recents.map((p) => (
+          <li>
+            <a href={`/${p.slug}/`}>{p.data.title}</a>
+            <span>
+              {p.data.category}
+              {" · "}
+              <time datetime={p.data.date.toISOString()}>{formatDate(p.data.date, SITE_CONFIG.locale)}</time>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )}
+  </div>
   {related.length > 0 && (
     <section class="ge-suite" aria-labelledby="suite-lecture">
       <h2 id="suite-lecture">{SITE_CONFIG.ui.alsoRead}</h2>
