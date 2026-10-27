@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 import ArticleTeaser from "./ArticleTeaser.astro";
 import { SITE_CONFIG } from "../config";
-import { formatDate } from "../lib/live";
 
 interface Props {
   items: CollectionEntry<"articles">[];
@@ -11,10 +10,11 @@ const { items } = Astro.props;
 ---
 <section class="ge-salon ge-bloc">
   <div class="ge-ruban">
-    <p>Cette semaine</p>
-    <p>Mis à jour</p>
+    <p>{SITE_CONFIG.ui.mostReadArticles}</p>
+    <p>3 fiches</p>
   </div>
-  <div class="ge-selection">
+  <p class="ge-bloc__soustitre">Les trois fiches que vous ouvrez le plus souvent. Les nouveautés sont juste en dessous.</p>
+  <div class="ge-selection ge-selection--simple">
     <div class="ge-liste">
       {items.length === 0 && <p class="ge-vide">{SITE_CONFIG.ui.newContentComing}</p>}
       {items.map((p) => (
@@ -23,13 +23,8 @@ const { items } = Astro.props;
           title={p.data.title}
           image={p.data.image}
           rubrique={p.data.category}
-          dateLabel={formatDate(p.data.date, SITE_CONFIG.locale)}
         />
       ))}
     </div>
-    <aside class="ge-rail">
-      <p class="ge-rail-titre">Comment on travaille</p>
-      <p class="ge-rail-texte">On part du texte officiel, pas des autres comparateurs. Arrêté pour un taux, BOFiP pour la fiscalité, circulaire pour le PEE. La source est citée en haut de chaque fiche.</p>
-    </aside>
   </div>
 </section>

@@ -648,9 +648,26 @@ a.ge-journal-item:hover .ge-teaser-titre {
   text-decoration-color: var(--or);
   text-underline-offset: 4px;
 }
-#journal,
+#derniers,
 #boite-outils {
   scroll-margin-top: 1rem;
+}
+.ge-bloc__soustitre {
+  margin: 0.5rem 0 0;
+  color: var(--ardoise);
+  font-size: 0.95rem;
+  max-width: 46rem;
+}
+.ge-selection--simple {
+  grid-template-columns: 1fr;
+}
+.ge-selection--simple .ge-liste {
+  border-right: 0;
+}
+@media (min-width: 768px) {
+  .ge-fil--tiers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* Article */

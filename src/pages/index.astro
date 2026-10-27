@@ -11,7 +11,20 @@ import { SITE_CONFIG } from "../config";
 import { liveArticles } from "../lib/live";
 
 const posts = liveArticles(await getCollection("articles"));
-const recents = posts.slice(0, 15);
+
+// Les 3 fiches les plus lues : pilotage manuel (ordre donné = ordre d'affichage).
+const MOST_READ_SLUGS = [
+  "vaut-il-mieux-emprunter-ou-utiliser-son-epargne",
+  "pourquoi-la-carsat-demande-le-montant-du-livret-a",
+  "virement-pea-vers-compte-courant",
+];
+const bySlug = new Map(posts.map((p) => [p.slug, p]));
+const lus = MOST_READ_SLUGS.map((s) => bySlug.get(s)).filter(
+  (p): p is (typeof posts)[number] => Boolean(p),
+);
+const lusIds = new Set(lus.map((p) => p.slug));
+// Les 12 dernières fiches, hors plus lues (pas de doublon entre les deux blocs).
+const recents = posts.filter((p) => !lusIds.has(p.slug)).slice(0, 12);
 const seo = SITE_CONFIG.homeSeo;
 ---
 <Layout
@@ -26,8 +39,8 @@ const seo = SITE_CONFIG.homeSeo;
 >
   <AccrocheHome />
   <GrilleRubriques />
-  {recents.length > 0 && <SelectionLue items={recents} />}
+  {lus.length > 0 && <SelectionLue items={lus} />}
   <BoiteOutils />
   <PortraitRedac />
-  <FilRecent />
+  <FilRecent items={recents} />
 </Layout>

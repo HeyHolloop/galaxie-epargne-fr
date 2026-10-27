@@ -26,7 +26,7 @@
     "schema_description": "Média indépendant 100 % épargne française. Guides vérifiés à partir de la Banque de France, Legifrance et du BOFiP."
   },
   "hero": {
-    "kicker": "Le constat",
+    "kicker": "Le point de départ",
     "title": "L’épargne française est mal rangée partout. On a fait trois tiroirs.",
     "subtitle": "Un Livret A n’est pas un PER. Un PEE n’est pas de l’argent dispo. On a rangé les produits comme la loi les range : ce que tu peux reprendre demain, ce qui est bloqué par ton employeur, ce qui est bloqué pour longtemps.",
     "image": "/images/accroche.jpg"
@@ -54,8 +54,8 @@
     "publishedBy": "Par",
     "alsoRead": "Aussi lire",
     "aboutAuthor": "Méthode",
-    "latestArticles": "Journal",
-    "mostReadArticles": "Cette semaine",
+    "latestArticles": "Les derniers articles",
+    "mostReadArticles": "Les plus lus",
     "recentArticles": "Derniers",
     "home": "Sommaire",
     "about": "Méthode",
