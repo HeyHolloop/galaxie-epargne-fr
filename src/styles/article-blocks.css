@@ -119,3 +119,85 @@ ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5re
   text-decoration: underline;
   text-decoration-color: #2563eb;
 }
+
+/* >>> objets-lecture : généré par nuclear/scripts/emit_objets_css.py, ne pas éditer à la main */
+/* ── Texte courant (ge) ── */
+.ge-prose > h2 { position: relative; padding-top: 0.7em; }
+.ge-prose > h2::before { content: ""; position: absolute; left: 0; top: 0; width: 2.4em; height: 4px; background: #8a6914; }
+.ge-prose > p strong, .ge-prose > ul:not([class]) > li strong, .ge-prose > ol:not([class]) > li strong { font-weight: 700; color: #0a0e17; background: linear-gradient(transparent 58%, rgb(138 105 20 / 0.2) 58%); padding: 0 0.1em; }
+.ge-prose > ul:not([class]) > li > strong:first-child, .ge-prose > ol:not([class]) > li > strong:first-child { color: #6e5218; background: none; text-decoration: none; padding: 0; }
+.ge-prose > ul:not([class]) { list-style-type: "– "; }
+.ge-prose > ul:not([class]) > li::marker { color: #8a6914; font-weight: 700; }
+.ge-prose .ge-table th { background: #6e5218; color: #fff; border-color: #6e5218; }
+.ge-prose .ge-table tbody tr:nth-child(even) td { background: color-mix(in srgb, #8a6914 6%, #fff); }
+
+/* ── Objets de lecture : erreurs, chiffres clés, pour qui, options ── */
+/* taille de base : celle du texte, bornée (certains thèmes WP posent 10px sur le conteneur) */
+.ge-erreurs, ul.ge-chiffres.ge-chiffres, .ge-pourqui, .ge-options { font-size: clamp(15px, 1em, 19px); }
+.ge-erreurs { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.ge-erreurs .ge-erreurs__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; overflow: hidden; background: #fff; border: 1px solid #ddd5c3; border-radius: 0; }
+.ge-erreurs .ge-erreurs__err, .ge-erreurs .ge-erreurs__fix { margin: 0; padding: 1em 1.15em 1.1em; border: 0; border-radius: 0; box-shadow: none; color: #0a0e17; }
+.ge-erreurs .ge-erreurs__err { background: #fdf1ef; }
+.ge-erreurs .ge-erreurs__fix { background: #eef7f0; border-left: 1px solid #ddd5c3; }
+.ge-erreurs .ge-erreurs__lab { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.5em 0; font-family: inherit; font-size: 0.7em; line-height: 1.2; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.ge-erreurs .ge-erreurs__err .ge-erreurs__lab { color: #a8321f; }
+.ge-erreurs .ge-erreurs__fix .ge-erreurs__lab { color: #1f6b3d; }
+.ge-erreurs .ge-erreurs__ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.9em; height: 1.9em; border-radius: 999px; font-size: 1.05em; font-weight: 900; letter-spacing: 0; }
+.ge-erreurs .ge-erreurs__err .ge-erreurs__ico { background: #f9d9d3; }
+.ge-erreurs .ge-erreurs__fix .ge-erreurs__ico { background: #cfead8; }
+.ge-erreurs .ge-erreurs__txt { margin: 0; font-size: 0.95em; line-height: 1.55; color: #0a0e17; }
+.ge-erreurs .ge-erreurs__cap { display: block; margin: 0 0 0.2em 0; padding: 0; background: none; text-decoration: none; font-weight: 800; color: #0a0e17; }
+/* ancien rendu (articles publiés avant le 18/11) : libellé en <strong> répété */
+.ge-erreurs .ge-erreurs__pair > .ge-callout > strong { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.5em 0; background: none; font-family: inherit; font-size: 0.7em; line-height: 1.2; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.ge-erreurs .ge-erreurs__pair > .ge-erreurs__err > strong { color: #a8321f; }
+.ge-erreurs .ge-erreurs__pair > .ge-erreurs__fix > strong { color: #1f6b3d; }
+.ge-erreurs .ge-erreurs__pair > .ge-erreurs__err > strong::before, .ge-erreurs .ge-erreurs__pair > .ge-erreurs__fix > strong::before { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.9em; height: 1.9em; border-radius: 999px; font-size: 1.05em; font-weight: 900; letter-spacing: 0; }
+.ge-erreurs .ge-erreurs__pair > .ge-erreurs__err > strong::before { content: "✕"; background: #f9d9d3; }
+.ge-erreurs .ge-erreurs__pair > .ge-erreurs__fix > strong::before { content: "✓"; background: #cfead8; }
+.ge-erreurs .ge-erreurs__pair ~ .ge-erreurs__pair > .ge-callout > strong { font-size: 0; gap: 0; }
+.ge-erreurs .ge-erreurs__pair ~ .ge-erreurs__pair > .ge-callout > strong::before { font-size: 0.75em; }
+.ge-erreurs .ge-erreurs__pair > .ge-callout > p { margin: 0; font-size: 0.95em; line-height: 1.55; color: #0a0e17; }
+
+ul.ge-chiffres.ge-chiffres { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.75em; margin: 1.75em 0 2.25em 0; padding: 0; }
+.ge-chiffres .ge-chiffres__card { display: block; margin: 0; padding: 1.15em 1.2em 1.2em; background: color-mix(in srgb, #8a6914 8%, #fff); color: #0a0e17; border: 1px solid color-mix(in srgb, #8a6914 28%, #fff); border-radius: 0; }
+.ge-chiffres .ge-chiffres__val { display: block; margin: 0 0 0.45em 0; padding: 0; background: none; text-decoration: none; font-family: var(--display, Georgia, serif); font-size: 1.85em; line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; color: #6e5218; }
+.ge-chiffres .ge-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #0a0e17; }
+
+.ge-pourqui { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.ge-pourqui .ge-pourqui__col { margin: 0; padding: 0; overflow: hidden; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; }
+.ge-pourqui .ge-pourqui__head { margin: 0; padding: 0.75em 1.1em; font-family: var(--display, Georgia, serif); font-size: 1em; line-height: 1.3; font-weight: 800; }
+.ge-pourqui .ge-pourqui__oui .ge-pourqui__head { background: #eef7f0; color: #1f6b3d; }
+.ge-pourqui .ge-pourqui__non .ge-pourqui__head { background: #fdf1ef; color: #a8321f; }
+ul.ge-pourqui__list.ge-pourqui__list { list-style: none; margin: 0; padding: 0.9em 1.1em 0.6em; }
+.ge-pourqui .ge-pourqui__list > li { display: flex; gap: 0.6em; margin: 0 0 0.65em 0; padding: 0; font-size: 0.95em; line-height: 1.5; color: #0a0e17; }
+.ge-pourqui .ge-pourqui__ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.3em; height: 1.3em; margin-top: 0.1em; border-radius: 999px; font-size: 0.7em; font-weight: 800; }
+.ge-pourqui .ge-pourqui__oui .ge-pourqui__ico { background: #cfead8; color: #1f6b3d; }
+.ge-pourqui .ge-pourqui__non .ge-pourqui__ico { background: #f9d9d3; color: #a8321f; }
+/* ancien rendu pour qui (classes callout) */
+.ge-pourqui > .ge-callout { margin: 0; padding: 0 0 0.6em 0; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; }
+.ge-pourqui > .ge-callout > strong { display: block; margin: 0 0 0.6em 0; padding: 0.75em 1.1em; font-family: var(--display, Georgia, serif); font-size: 1em; font-weight: 800; }
+.ge-pourqui > .ge-pourqui__oui > strong { background: #eef7f0; color: #1f6b3d; }
+.ge-pourqui > .ge-pourqui__non > strong { background: #fdf1ef; color: #a8321f; }
+.ge-pourqui > .ge-callout > ul { margin: 0; padding: 0 1.1em 0 2.2em; }
+
+.ge-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.ge-options.ge-options--2, .ge-options.ge-options--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ge-options { container-type: inline-size; }
+/* deux colonnes et un nombre impair de cartes : la dernière prend toute la largeur */
+@container (max-width: 740px) { .ge-options .ge-options__card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+.ge-options .ge-options__card { display: flex; flex-direction: column; margin: 0; padding: 1.1em 1.2em 1.15em; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; border-top: 4px solid #8a6914; }
+.ge-options .ge-options__card h3 { margin: 0 0 0.45em 0; font-family: var(--display, Georgia, serif); font-size: 1.08em; line-height: 1.3; font-weight: 700; color: #6e5218;  }
+.ge-options .ge-options__card p { margin: 0 0 0.8em 0; font-size: 0.93em; line-height: 1.55; color: #0a0e17; }
+.ge-options .ge-options__card .ge-options__tag { margin: auto 0 0 0; align-self: flex-start; padding: 0.22em 0.7em; border-radius: 999px; background: color-mix(in srgb, #8a6914 14%, #fff); color: #6e5218; font-family: inherit; font-size: 0.75em; line-height: 1.3; font-weight: 700; }
+.ge-options .ge-options__card .ge-options__tag::first-letter { text-transform: uppercase; }
+
+/* puces et marqueurs du thème : jamais dans ces blocs */
+.ge-chiffres .ge-chiffres__card::before, .ge-chiffres .ge-chiffres__card::after,
+.ge-pourqui .ge-pourqui__list > li::before, .ge-pourqui .ge-pourqui__list > li::after { content: none; display: none; }
+
+@media (max-width: 640px) {
+  .ge-erreurs .ge-erreurs__pair { grid-template-columns: 1fr; }
+  .ge-erreurs .ge-erreurs__fix { border-left: 0; border-top: 1px solid #ddd5c3; }
+  .ge-pourqui, .ge-options, .ge-options.ge-options--2, .ge-options.ge-options--4 { grid-template-columns: 1fr; }
+}
+/* <<< objets-lecture */
