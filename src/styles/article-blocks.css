@@ -133,7 +133,8 @@ ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5re
 
 /* ── Objets de lecture : erreurs, chiffres clés, pour qui, options ── */
 /* taille de base : celle du texte, bornée (certains thèmes WP posent 10px sur le conteneur) */
-.ge-erreurs, ul.ge-chiffres.ge-chiffres, .ge-pourqui, .ge-options { font-size: clamp(15px, 1em, 19px); }
+.ge-erreurs, ul.ge-chiffres.ge-chiffres, .ge-pourqui, .ge-options { font-size: clamp(15px, 1em, 19px); text-align: left; hyphens: manual; }
+.ge-erreurs *, .ge-chiffres *, .ge-pourqui *, .ge-options * { text-align: left; }
 .ge-erreurs { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .ge-erreurs .ge-erreurs__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; overflow: hidden; background: #fff; border: 1px solid #ddd5c3; border-radius: 0; }
 .ge-erreurs .ge-erreurs__err, .ge-erreurs .ge-erreurs__fix { margin: 0; padding: 1em 1.15em 1.1em; border: 0; border-radius: 0; box-shadow: none; color: #0a0e17; }
@@ -158,9 +159,11 @@ ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5re
 .ge-erreurs .ge-erreurs__pair ~ .ge-erreurs__pair > .ge-callout > strong::before { font-size: 0.75em; }
 .ge-erreurs .ge-erreurs__pair > .ge-callout > p { margin: 0; font-size: 0.95em; line-height: 1.55; color: #0a0e17; }
 
+ul.ge-chiffres.ge-chiffres:has(> :nth-child(4):last-child) { grid-template-columns: repeat(auto-fit, minmax(9.5em, 1fr)); }
 ul.ge-chiffres.ge-chiffres { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.75em; margin: 1.75em 0 2.25em 0; padding: 0; }
 .ge-chiffres .ge-chiffres__card { display: block; margin: 0; padding: 1.15em 1.2em 1.2em; background: color-mix(in srgb, #8a6914 8%, #fff); color: #0a0e17; border: 1px solid color-mix(in srgb, #8a6914 28%, #fff); border-radius: 0; }
-.ge-chiffres .ge-chiffres__val { display: block; margin: 0 0 0.45em 0; padding: 0; background: none; text-decoration: none; font-family: var(--display, Georgia, serif); font-size: 1.85em; line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; color: #6e5218; }
+.ge-chiffres .ge-chiffres__card { container-type: inline-size; }
+.ge-chiffres .ge-chiffres__val { display: block; margin: 0 0 0.45em 0; padding: 0; background: none; text-decoration: none; font-family: var(--display, Georgia, serif); font-size: clamp(1.15rem, 14cqi, 1.85em); line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; color: #6e5218; }
 .ge-chiffres .ge-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #0a0e17; }
 
 .ge-pourqui { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
@@ -182,6 +185,8 @@ ul.ge-pourqui__list.ge-pourqui__list { list-style: none; margin: 0; padding: 0.9
 
 .ge-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .ge-options.ge-options--2, .ge-options.ge-options--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* articles sans classe de nombre (avant le 18/11) : 2 ou 4 cartes = 2 colonnes */
+.ge-options:has(> :nth-child(2):last-child), .ge-options:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ge-options { container-type: inline-size; }
 /* deux colonnes et un nombre impair de cartes : la dernière prend toute la largeur */
 @container (max-width: 740px) { .ge-options .ge-options__card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
@@ -198,6 +203,7 @@ ul.ge-pourqui__list.ge-pourqui__list { list-style: none; margin: 0; padding: 0.9
 @media (max-width: 640px) {
   .ge-erreurs .ge-erreurs__pair { grid-template-columns: 1fr; }
   .ge-erreurs .ge-erreurs__fix { border-left: 0; border-top: 1px solid #ddd5c3; }
-  .ge-pourqui, .ge-options, .ge-options.ge-options--2, .ge-options.ge-options--4 { grid-template-columns: 1fr; }
+  .ge-pourqui, .ge-options, .ge-options.ge-options--2, .ge-options.ge-options--4,
+  .ge-options:has(> :nth-child(2):last-child), .ge-options:has(> :nth-child(4):last-child) { grid-template-columns: 1fr; }
 }
 /* <<< objets-lecture */
