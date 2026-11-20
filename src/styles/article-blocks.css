@@ -133,8 +133,8 @@ ul.ge-checklist { list-style: disc; margin: 0 0 2.25rem 0; padding: 1.5rem 1.5re
 
 /* ── Objets de lecture : erreurs, chiffres clés, pour qui, options ── */
 /* taille de base : celle du texte, bornée (certains thèmes WP posent 10px sur le conteneur) */
-.ge-erreurs, ul.ge-chiffres.ge-chiffres, .ge-pourqui, .ge-options { font-size: clamp(15px, 1em, 19px); text-align: left; hyphens: manual; }
-.ge-erreurs *, .ge-chiffres *, .ge-pourqui *, .ge-options * { text-align: left; }
+.ge-erreurs, ul.ge-chiffres.ge-chiffres, .ge-pourqui, .ge-options, .ge-change, .ge-courrier, .ge-consulter { font-size: clamp(15px, 1em, 19px); text-align: left; hyphens: manual; }
+.ge-erreurs *, .ge-chiffres *, .ge-pourqui *, .ge-options *, .ge-change *, .ge-courrier *, .ge-consulter * { text-align: left; }
 .ge-erreurs { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .ge-erreurs .ge-erreurs__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; overflow: hidden; background: #fff; border: 1px solid #ddd5c3; border-radius: 0; }
 .ge-erreurs .ge-erreurs__err, .ge-erreurs .ge-erreurs__fix { margin: 0; padding: 1em 1.15em 1.1em; border: 0; border-radius: 0; box-shadow: none; color: #0a0e17; }
@@ -165,7 +165,7 @@ ul.ge-chiffres.ge-chiffres { list-style: none; display: grid; grid-template-colu
 .ge-chiffres .ge-chiffres__card { display: block; margin: 0; padding: 1.15em 1.2em 1.2em; background: color-mix(in srgb, #8a6914 8%, #fff); color: #0a0e17; border: 1px solid color-mix(in srgb, #8a6914 28%, #fff); border-radius: 0; }
 .ge-chiffres .ge-chiffres__card { container-type: inline-size; }
 .ge-chiffres .ge-chiffres__val { display: block; margin: 0 0 0.45em 0; padding: 0; background: none; text-decoration: none; font-family: var(--display, Georgia, serif); font-size: clamp(1.15rem, 14cqi, 1.85em); line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; color: #6e5218; }
-.ge-chiffres .ge-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #0a0e17; }
+.ge-chiffres .ge-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #0a0e17; overflow-wrap: break-word; hyphens: auto; }
 
 .ge-pourqui { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .ge-pourqui .ge-pourqui__col { margin: 0; padding: 0; overflow: hidden; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; }
@@ -198,19 +198,63 @@ ul.ge-chiffres > .ge-chiffres__card:nth-child(3n+1):nth-last-child(2), ul.ge-chi
   ul.ge-chiffres.ge-chiffres.ge-chiffres > .ge-chiffres__card.ge-chiffres__card.ge-chiffres__card.ge-chiffres__card { grid-column: span 3; }
   ul.ge-chiffres.ge-chiffres.ge-chiffres > .ge-chiffres__card.ge-chiffres__card.ge-chiffres__card:nth-child(odd):last-child { grid-column: span 6; }
 }
+/* très étroit (mobile) : une carte chiffre par ligne */
+@container (max-width: 420px) {
+  ul.ge-chiffres.ge-chiffres.ge-chiffres > .ge-chiffres__card.ge-chiffres__card.ge-chiffres__card.ge-chiffres__card.ge-chiffres__card { grid-column: span 6; }
+}
 .ge-options .ge-options__card { display: flex; flex-direction: column; margin: 0; padding: 1.1em 1.2em 1.15em; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; border-top: 4px solid #8a6914; }
 .ge-options .ge-options__card h3 { margin: 0 0 0.45em 0; font-family: var(--display, Georgia, serif); font-size: 1.08em; line-height: 1.3; font-weight: 700; color: #6e5218;  }
 .ge-options .ge-options__card p { margin: 0 0 0.8em 0; font-size: 0.93em; line-height: 1.55; color: #0a0e17; }
 .ge-options .ge-options__card .ge-options__tag { margin: auto 0 0 0; align-self: flex-start; padding: 0.22em 0.7em; border-radius: 999px; background: color-mix(in srgb, #8a6914 14%, #fff); color: #6e5218; font-family: inherit; font-size: 0.75em; line-height: 1.3; font-weight: 700; }
 .ge-options .ge-options__card .ge-options__tag::first-letter { text-transform: uppercase; }
 
+/* ce qui a changé : une ligne par point, ancienne règle grisée, nouvelle règle en couleur du site */
+.ge-change { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.ge-change .ge-change__row { display: grid; grid-template-columns: 1fr 1fr; margin: 0; overflow: hidden; background: #fff; border: 1px solid #ddd5c3; border-radius: 0; }
+.ge-change .ge-change__sujet { grid-column: 1 / -1; margin: 0; padding: 0.7em 1.15em; font-family: var(--display, Georgia, serif); font-size: 1em; line-height: 1.3; font-weight: 800; color: #6e5218; border-bottom: 1px solid #ddd5c3; }
+.ge-change .ge-change__old, .ge-change .ge-change__new { margin: 0; padding: 0.9em 1.15em 1em; }
+.ge-change .ge-change__old { background: #f5f5f4; color: #57534e; }
+.ge-change .ge-change__new { background: color-mix(in srgb, #8a6914 8%, #fff); border-left: 1px solid #ddd5c3; }
+.ge-change .ge-change__lab { margin: 0 0 0.4em 0; font-family: inherit; font-size: 0.7em; line-height: 1.2; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.ge-change .ge-change__old .ge-change__lab { color: #78716c; }
+.ge-change .ge-change__new .ge-change__lab { color: #6e5218; }
+.ge-change .ge-change__row ~ .ge-change__row .ge-change__lab { display: none; }
+.ge-change .ge-change__txt { margin: 0; font-size: 0.95em; line-height: 1.55; }
+.ge-change .ge-change__old .ge-change__txt { color: #57534e; }
+.ge-change .ge-change__new .ge-change__txt { color: #0a0e17; }
+
+/* modèle de courrier : une feuille, cases à remplir surlignées */
+.ge-courrier { margin: 1.75em 0 2.25em 0; }
+.ge-courrier .ge-courrier__titre { margin: 0 0 0.5em 0; font-family: inherit; font-size: 0.75em; line-height: 1.3; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #6e5218; }
+.ge-courrier .ge-courrier__page { margin: 0; padding: 1.4em 1.6em 1.3em; background: #fffefb; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; border-left: 4px solid #8a6914; }
+.ge-courrier .ge-courrier__objet { margin: 0 0 1em 0; font-weight: 700; font-size: 0.97em; line-height: 1.45; }
+.ge-courrier .ge-courrier__corps p { margin: 0 0 0.8em 0; font-size: 0.95em; line-height: 1.65; }
+.ge-courrier .ge-courrier__corps p:last-child { margin-bottom: 0; }
+.ge-courrier .ge-courrier__case { padding: 0 0.3em; border-radius: 3px; background: color-mix(in srgb, #8a6914 14%, #fff); color: #6e5218; font-style: italic; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* quand appeler un pro : gérer seul (couleur du site) / appeler sans attendre (ambre) */
+.ge-consulter { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.ge-consulter .ge-consulter__col { margin: 0; padding: 0; overflow: hidden; background: #fff; color: #0a0e17; border: 1px solid #ddd5c3; border-radius: 0; }
+.ge-consulter .ge-consulter__head { margin: 0; padding: 0.75em 1.1em; font-family: var(--display, Georgia, serif); font-size: 1em; line-height: 1.3; font-weight: 800; }
+.ge-consulter .ge-consulter__seul .ge-consulter__head { background: color-mix(in srgb, #8a6914 8%, #fff); color: #6e5218; }
+.ge-consulter .ge-consulter__appeler .ge-consulter__head { background: #fff4e2; color: #8a4a00; }
+ul.ge-consulter__list.ge-consulter__list { list-style: none; margin: 0; padding: 0.9em 1.1em 0.6em; }
+.ge-consulter .ge-consulter__list > li { display: flex; gap: 0.6em; margin: 0 0 0.65em 0; padding: 0; font-size: 0.95em; line-height: 1.5; color: #0a0e17; }
+.ge-consulter .ge-consulter__ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.3em; height: 1.3em; margin-top: 0.1em; border-radius: 999px; font-size: 0.7em; font-weight: 900; }
+.ge-consulter .ge-consulter__seul .ge-consulter__ico { background: color-mix(in srgb, #8a6914 14%, #fff); color: #6e5218; }
+.ge-consulter .ge-consulter__appeler .ge-consulter__ico { background: #f7d39a; color: #8a4a00; }
+
 /* puces et marqueurs du thème : jamais dans ces blocs */
 .ge-chiffres .ge-chiffres__card::before, .ge-chiffres .ge-chiffres__card::after,
-.ge-pourqui .ge-pourqui__list > li::before, .ge-pourqui .ge-pourqui__list > li::after { content: none; display: none; }
+.ge-pourqui .ge-pourqui__list > li::before, .ge-pourqui .ge-pourqui__list > li::after,
+.ge-consulter .ge-consulter__list > li::before, .ge-consulter .ge-consulter__list > li::after { content: none; display: none; }
 
 @media (max-width: 640px) {
   .ge-erreurs .ge-erreurs__pair { grid-template-columns: 1fr; }
   .ge-erreurs .ge-erreurs__fix { border-left: 0; border-top: 1px solid #ddd5c3; }
-  .ge-pourqui { grid-template-columns: 1fr; }
+  .ge-pourqui, .ge-consulter, .ge-change .ge-change__row { grid-template-columns: 1fr; }
+  .ge-change .ge-change__new { border-left: 0; border-top: 1px solid #ddd5c3; }
+  .ge-change .ge-change__row ~ .ge-change__row .ge-change__lab { display: block; }
+  .ge-courrier .ge-courrier__page { padding: 1.1em 1.1em 1em; }
 }
 /* <<< objets-lecture */
